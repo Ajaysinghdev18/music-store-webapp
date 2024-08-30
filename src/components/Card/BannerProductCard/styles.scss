@@ -1,0 +1,489 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+.primary-card-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 3% 5% 8%;
+  justify-content: space-between;
+  border: 1px solid transparent;
+  background: linear-gradient(137deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(139deg, rgba(58, 129, 191, 0.08) 0%, rgba(65, 48, 90, 0.08) 100%);
+  backdrop-filter: blur(555px);
+
+  .gradiant-top {
+    background: radial-gradient(circle at center, #FB37FF 10%, transparent, transparent 100%);
+    position: absolute;
+    display: flex;
+    height: 50%;
+    filter: blur(50px);
+    width: 50%;
+    right: 30%;
+    bottom: 64%;
+  }
+
+  .gradiant-bottom {
+    background: radial-gradient(circle at center, #18B2DE 0%, transparent, transparent 100%);
+    position: absolute;
+    display: flex;
+    height: 65%;
+    filter: blur(100px);
+    width: 100%;
+    left: 40%;
+    top: 65%;
+  }
+
+  .product-image {
+    height: 70%;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .product-details {
+    height: 30%;
+    margin-top: 5%;
+    width: 100%;
+    z-index: 100;
+
+    // @include breakpoint($sm) {
+    //   height: 50%;
+    // }
+  }
+}
+
+.common-detail-section-container {
+  display: flex;
+  // height: 70%;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .common-button-section {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+    .common-artist-detail-section {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      @include breakpoint($sm) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      & p {
+        white-space: nowrap;
+        width: 80%;
+        overflow: hidden;
+      }
+
+      .common-artist-image {
+        display: flex;
+        height: 40px;
+        width: 50px;
+        margin-right: 22px;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint($xl) {
+          height: 20px;
+          width: 20px;
+          margin-right: 12px;
+        }
+
+        & img {
+          border-radius: 50%;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+  }
+
+  .divider {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-bottom: solid 1px white;
+  }
+
+  .common-details-section {
+    width: 100%;
+    display: flex;
+    height: 50%;
+
+    // @include breakpoint($sm) {
+    //   height: fit-content;
+    //   flex-direction: column;
+    // }
+
+    .common-product-details-section {
+      width: 80%;
+      z-index: 10;
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+
+      // @include breakpoint($sm) {
+      //   width: 100%;
+      // }
+
+      & p {
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+
+    .common-icon-container {
+      display: flex;
+      justify-content: space-between;
+      width: 20%;
+      z-index: 10;
+
+      // @include breakpoint($sm) {
+      //   width: 100%;
+      //   justify-content: flex-start;
+      //   margin-top: 12px;
+      // }
+
+      & svg {
+        height: 40px !important;
+        width: 40px !important;
+
+        // @include breakpoint($xxl) {
+        //   height: 20px !important;
+        //   width: 20px !important;
+        // }
+      }
+    }
+
+    .common-artist-image {
+      display: flex;
+      height: 50%;
+      width: 20%;
+      margin-right: 12px;
+      justify-content: center;
+      align-items: center;
+
+      & img {
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+
+}
+.primary-detail-section-container {
+  display: flex;
+  // height: 70%;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .primary-button-section {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: end;
+    margin-top: 20px;
+
+    .primary-artist-detail-section {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      z-index: 100;
+
+      & p {
+        white-space: nowrap;
+        width: 80%;
+        overflow: hidden;
+        text-align: start;
+      }
+
+      .primary-artist-image {
+        display: flex;
+        height: 40px;
+        width: 50px;
+        margin-right: 22px;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint($xl) {
+          height: 20px;
+          width: 20px;
+          margin-right: 12px;
+        }
+
+        & img {
+          border-radius: 50%;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+  }
+
+  .divider {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-bottom: solid 1px white;
+  }
+
+  .primary-details-section {
+    width: 100%;
+    display: flex;
+    // height: 50%;
+    margin-top: 20px;
+
+    .primary-product-details-section {
+      width: 80%;
+      z-index: 10;
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+
+      & p {
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+        text-align: start;
+      }
+    }
+
+    .primary-icon-container {
+      display: flex;
+      justify-content: space-between;
+      width: 20%;
+      z-index: 10;
+
+      & svg {
+        height: 40px !important;
+        width: 40px !important;
+
+        @include breakpoint($xxl) {
+          height: 20px !important;
+          width: 20px !important;
+        }
+      }
+    }
+
+    .artist-image {
+      display: flex;
+      height: 50%;
+      width: 20%;
+      margin-right: 12px;
+      justify-content: center;
+      align-items: center;
+      @include breakpoint($xxl) {
+        height: 20px !important;
+        width: 20px !important;
+      }
+      & img {
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+
+}
+
+.card-social-description-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    & h1 {
+      margin-top: 25px;
+    }
+
+    & h2 {
+      margin-top: 10px;
+    }
+
+    & p {
+      margin-top: 30px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .social-description {
+    margin-top: 25px;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+  }
+}
+
+.community-event-description-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+    gap: 10px;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.community-event-image-card-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+
+  .box1 {
+    position: absolute;
+    display: flex;
+    width: 490.07px;
+    height: 700.702px;
+    background: linear-gradient(137deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.15) 100%);
+    box-shadow: 0px 3.521604061126709px 43.1396484375px 0px rgba(0, 7, 72, 0.12);
+    backdrop-filter: blur(111.005012512207031px);
+    transform: skewY(-11deg);
+    -webkit-transform: skew(-11deg);
+  }
+
+  .gradiant1 {
+    width: 245.263px;
+    height: 249px;
+    border-radius: 50%;
+    transform: rotate(39.402deg);
+    flex-shrink: 0;
+    fill: rgba(143, 0, 255, 0.35);
+    filter: blur(66.0300750732px);
+    background: linear-gradient(264deg, rgba(143, 0, 255, 0.35) 0%, black 100%);
+    position: absolute;
+    display: flex;
+    right: 68%;
+    bottom: 63%;
+  }
+
+  .gradiant2 {
+    width: 449px;
+    height: 449.885px;
+    transform: rotate(39.402deg);
+    flex-shrink: 0;
+    fill: rgba(143, 0, 255, 0.35);
+    filter: blur(66.0300750732px);
+    background: linear-gradient(264deg, rgba(143, 0, 255, 0.35) 0%, transparent 100%);
+    position: absolute;
+    display: flex;
+    left: 29%;
+    top: 45%;
+  }
+
+  .box2 {
+    display: flex;
+    width: 490.07px;
+    position: absolute;
+    height: 376.68px;
+    background: linear-gradient(137deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.15) 100%);
+    box-shadow: 0px 3.521604061126709px 43.1396484375px 0px rgba(0, 7, 72, 0.12);
+    backdrop-filter: blur(111.005012512207031px);
+    transform: skewY(-11deg);
+    -webkit-transform: skew(-11deg);
+    right: 40%;
+    bottom: 50%;
+  }
+
+  .event-description {
+    display: flex;
+    width: 67%;
+    justify-content: space-between;
+    position: absolute;
+    height: fit-content;
+    padding: 34px;
+    transform: skewY(-11deg);
+    -webkit-transform: skew(-11deg);
+    background: linear-gradient(137deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 100%);
+    box-shadow: 28.172832489px 25.5316295624px 43.1396484375px 0px rgba(0, 7, 72, 0.08);
+    -webkit-backdrop-filter: blur(20.2492237091px);
+    backdrop-filter: blur(20.2492237091px);
+    z-index: 100;
+    top: 75%;
+    right: 44%;
+  }
+
+  .auction-container {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    position: absolute;
+    height: fit-content;
+    padding: 34px;
+    transform: skewY(-11deg);
+    -webkit-transform: skew(-11deg);
+    background: linear-gradient(137deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 100%);
+    box-shadow: 28.172832489px 25.5316295624px 43.1396484375px 0px rgba(0, 7, 72, 0.08);
+    -webkit-backdrop-filter: blur(20.2492237091px);
+    backdrop-filter: blur(520.2492237091px);
+    z-index: 100;
+    top: 110%;
+    right: 77%;
+  }
+
+  .timer-container {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    position: absolute;
+    height: fit-content;
+    padding: 34px;
+    transform: skewY(-11deg);
+    -webkit-transform: skew(-11deg);
+    background: linear-gradient(137deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 100%);
+    box-shadow: 28.172832489px 25.5316295624px 43.1396484375px 0px rgba(0, 7, 72, 0.08);
+    -webkit-backdrop-filter: blur(20.2492237091px);
+    backdrop-filter: blur(520.2492237091px);
+    z-index: 100;
+    top: 116%;
+    right: 17%;
+  }
+}
+
+.audio-wrapper {
+  .play-button {
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .d-audio-player wave {
+    overflow: hidden !important;
+  }
+}

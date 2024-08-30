@@ -1,0 +1,134 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.d-table-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .d-table-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0 38.5px;
+    @include breakpoint($md) {
+      padding: 0 0px;
+      margin-top: 20px;
+      width: 90%;
+      align-self: center;
+    }
+    .d-table-refresh {
+      display: flex;
+      align-items: center;
+
+      .d-icon-button {
+        margin-left: 30px;
+        @include breakpoint($sm) {
+          margin-left: 5px;
+        }
+
+        &.refreshing {
+          animation: rotate 1s linear infinite;
+        }
+      }
+    }
+  }
+
+  .d-table-divider {
+    height: 1px;
+    background-color: $white;
+    width: calc(100% + 24px);
+    margin-left: -24px;
+  }
+  .table-container {
+    width: 100%;
+    @include breakpoint($sm) {
+      width: 90%;
+      align-self: center;
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
+    .d-table {
+      width: 100%;
+      border-collapse: collapse;
+      @include breakpoint($sm) {
+        width: 300px;
+        border-collapse: collapse;
+        display: inline-block;
+      }
+      .d-table-head {
+        .d-table-row {
+          .d-table-cell {
+            @include text-body1;
+          }
+        }
+      }
+
+      .d-table-body {
+        background-color: rgba(0, 0, 0, 0.2);
+
+        .d-table-row {
+          &:first-of-type {
+            .d-table-cell {
+              padding-top: 20px;
+            }
+          }
+
+          &:last-of-type {
+            .d-table-cell {
+              padding-bottom: 20px;
+            }
+          }
+        }
+      }
+
+      .d-table-row {
+        .d-table-cell {
+          @include text-body2;
+          text-align: left;
+          color: $white;
+          padding: 10px;
+
+          @include breakpoint($sm) {
+            padding: 10px;
+          }
+
+          &:first-of-type {
+            padding-left: 38.5px;
+            @include breakpoint($xs) {
+              padding-left: 0px;
+            }
+          }
+
+          &:last-of-type {
+            padding-right: 38.5px;
+            @include breakpoint($xs) {
+              padding-right: 12px;
+            }
+          }
+
+          &.d-table-cell--right {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+  .d-pagination {
+    margin-top: 20px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.bid-table{
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.00) -2.13%, rgba(255, 255, 255, 0.15) 136.58%), linear-gradient(169deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%) !important;
+  backdrop-filter: blur(555px) !important;
+}

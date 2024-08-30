@@ -1,0 +1,14 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.cart-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 2.5rem, !important;
+  border-radius: 1.50rem !important;
+  background: linear-gradient(130deg, $cyan, $magenta);
+  color: $white;
+  font-family: 'GemunuLibre';
+}

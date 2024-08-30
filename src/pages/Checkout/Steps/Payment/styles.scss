@@ -1,0 +1,130 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.form-wrapper.payment-step {
+  grid-column: 3 / span 2;
+
+  @include breakpoint($sm){
+    display: flex;
+    flex-direction: column;
+  }
+
+  .payment-form-container{
+    width: 80%;
+  }
+  form {
+    .payment-label {
+      color: darken($white, 55%);
+    }
+
+    .add-card-button {
+      display: flex !important;
+      color: $white !important;
+      justify-content: flex-start;
+
+      .d-icon {
+        position: relative;
+        color: $white;
+        height: 17px;
+        left: 0;
+        margin-right: 16px;
+      }
+
+      @include text-body2;
+    }
+
+    .payment-address-wrapper {
+      display: flex;
+      align-items: center;
+
+      .payment-address {
+        display: flex;
+        align-items: center;
+        text-decoration: underline;
+
+        .d-icon {
+          color: $lime;
+        }
+      }
+
+      .d-icon-button {
+        display: flex !important;
+      }
+    }
+
+    .crypto-currency {
+      position: relative;
+      margin-left: 8%;
+      display: flex;
+      flex-direction: column;
+      height: 116px;
+      justify-content: space-between;
+      .crypto-currency-line {
+        height: calc(100% + 2px);
+        border-left: 1px dashed $white;
+        position: absolute;
+        left: 1%;
+        z-index: -1;
+        @include breakpoint($xxxl){
+          left: 3%;
+        }
+      }
+
+      .selected-crypto {
+        //margin-top: 15px;
+
+        .prepaid-crypto {
+          & + .prepaid-crypto {
+            //margin-top: 15px;
+          }
+        }
+      }
+
+      .crypto-select {
+        z-index: 1;
+        position: relative;
+        background-color: red;
+
+        .crypto-options {
+          position: absolute;
+          width: 100%;
+
+        }
+      }
+    }
+  }
+
+  .payment-bill-wrapper {
+    width: 80%;
+    justify-content: space-evenly;
+    display: flex;
+
+    @include breakpoint($sm){
+      width: 100%;
+      margin-top: 5%;
+      justify-content: space-between;
+    }
+    .payment-bill {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+
+      .bill-item {
+        margin-top: 1%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3%;
+        .d-icon {
+          margin-right: 15px;
+          height: 25px;
+          width: 25px;
+          @include breakpoint($sm){
+            height: 15px;
+            width: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+

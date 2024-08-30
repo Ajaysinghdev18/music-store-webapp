@@ -1,0 +1,118 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.row {
+  display: flex;
+
+  @include breakpoint($sm) {
+    flex-direction: column;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.kyc-verification-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+
+  @include breakpoint-up(1092px) {
+    width: 1092px !important;
+  }
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+
+.select-country,
+.select-city {
+  border: none;
+  border-bottom: 1px solid white;
+
+  :hover {
+    border-bottom: 2px solid #00ff00;
+  }
+}
+
+.padding-box {
+  padding-left: 30px;
+  background-color: transparent;
+  border: none;
+}
+
+.d-form-control {
+  input {
+    color: black;
+    font-size: 25px !important;
+    // height: 52px !important;
+    text-align: left;
+    //padding-left: 30px !important;
+  }
+
+  input::-webkit-calendar-picker-indicator {
+    background-color: white;
+    padding: 0;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+.form {
+  margin-top: 20px;
+
+  .id-container {
+
+    .step-title {
+      color: white;
+      font-size: 24px;
+      font-family: Helvetica;
+      @include breakpoint($sm) {
+       margin-bottom: 20px;
+      }
+    }
+
+    .actions {
+      display: flex;
+    }
+  }
+
+  .stage-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    @include breakpoint($sm) {
+      flex-direction: column;
+     }
+    .btn {
+      width: 180px;
+      height: 46px;
+      //background-color: #00cc00;
+      font-size: 24px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      min-width: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include breakpoint($sm) {
+        width: 100%;
+        margin-top: 10px;
+       }
+    }
+
+    .contained {
+      background-color: #00ff00;
+      color: black;
+    }
+  }
+
+
+}

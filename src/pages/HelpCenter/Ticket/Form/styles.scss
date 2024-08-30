@@ -1,0 +1,82 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.ticket-form-page {
+  display: flex;
+  padding: 60px 60px 120px;
+
+  .form {
+    flex: 1;
+    padding-right: 120px;
+
+    .title {
+      margin-bottom: 60px;
+    }
+
+    .d-form-control {
+      margin-bottom: 32px;
+
+      .d-form-label {
+        margin-bottom: 16px;
+        padding-bottom: 0;
+      }
+
+      .d-form-outlined-textarea {
+        min-height: 696px;
+      }
+
+      input {
+        color: white;
+      }
+    }
+    .flex-between{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .file-upload {
+      display: none;
+    }
+    .text-file-up-file-name {
+      padding-left: 64px!important;
+    }
+    .text-file-up-limit {
+      position: absolute;
+      top: 14px;
+      right: 24px;
+      font-size: 17px;
+      opacity: 50%;
+    }
+    .actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 200px;
+
+      button {
+        & + button {
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+
+  .popular {
+    width: 540px;
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      a {
+        @include text-body1;
+        margin-bottom: 32px;
+        text-decoration: none;
+
+        &.active {
+          color: $magenta;
+        }
+      }
+    }
+  }
+}

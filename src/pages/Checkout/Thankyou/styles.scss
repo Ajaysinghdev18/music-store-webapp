@@ -1,0 +1,91 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+.confirm-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    font-family: $font-family1;
+
+    .text--color {
+      font-family: $font-family1;
+      font-size: 65px;
+      font-weight: 400;
+      line-height: 65px;
+      font-style: normal;
+      text-align: center;
+      color: #00ffff;
+      margin-top: 18px;
+    }
+
+    .order-details {
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+
+      .detail-item {
+        display: flex;
+        justify-content: space-between;
+
+        >span:first-of-type {
+          color: darken($white, 50%);
+        }
+
+        >span:last-of-type {
+          text-align: right;
+
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 10px;
+
+            .d-icon {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+
+      .summary {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+          font-family: $font-family1;
+          font-size: 30px;
+          font-weight: bold;
+          color: #ffffff;
+        }
+      }
+
+      .order-divider {
+        width: 100%;
+      }
+    }
+
+    .back-home-button {
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+
+    .total-price {
+      display: flex;
+      min-width: 347px;
+      justify-content: space-between;
+
+      @include breakpoint($lg) {
+        display: none;
+      }
+    }
+
+    .pay-button {
+      z-index: 1;
+      display: flex;
+      margin-top: 5%;
+    }
+  }

@@ -1,0 +1,228 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.us-page {
+  position: relative;
+  min-height: calc(100vh - #{$header-h});
+  background: url('/images/us-bg.png') no-repeat center;
+
+  .us-page-title {
+    backdrop-filter: none;
+  }
+
+  .content {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    height: calc(100vh - 263px);
+    overflow: hidden;
+
+    .tabs-wrapper {
+      position: absolute;
+      right: 73px;
+      width: 1px;
+      height: calc(100% - 97px);
+      background-color: $white;
+      padding: 48.5px 0;
+
+      @include breakpoint($md) {
+        right: 30px;
+      }
+
+      .tabs {
+        margin-left: -12px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        .tab {
+          background-color: $black;
+          border: 3px solid $white;
+          border-radius: 12px;
+          width: 24px;
+          height: 24px;
+          padding: 0;
+          position: absolute;
+          transition-duration: 1s;
+          transition-property: top;
+          top: 50%;
+
+          &.top {
+            @for $i from 1 through 10 {
+              &:nth-child(#{$i}) {
+                top: 44px * ($i - 1);
+              }
+            }
+          }
+
+          &.bottom {
+            @for $i from 1 through 10 {
+              &:nth-last-child(#{$i}) {
+                top: (calc(100% - 44px * (#{$i} - 1)));
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .tab-panels {
+      height: 100%;
+      padding: 0 123px 0 110px;
+
+      .tab-panel {
+        height: 100%;
+        position: relative;
+        display: none;
+        justify-content: center;
+
+        &.block {
+          display: flex;
+        }
+
+        &.slide-up {
+          animation: slide-up 1000ms;
+        }
+
+        &.slide-down {
+          animation: slide-down 1000ms;
+        }
+
+        &.hidden-up {
+          animation: hidden-up 1000ms;
+        }
+
+        &.hidden-down {
+          animation: hidden-down 1000ms;
+        }
+
+        .panel-item {
+          backdrop-filter: blur(30px);
+          position: absolute;
+          padding: 25px 35px;
+
+          &.half {
+            width: calc(50% - 70px);
+          }
+
+          &.third {
+            width: calc(100% / 3 - 70px);
+          }
+
+          &.right {
+            right: 0;
+          }
+
+          &.left {
+            left: 0;
+          }
+
+          .text-heading3 {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      @include breakpoint($xl) {
+        .panel-item {
+          width: 40% !important;
+
+          &.center {
+            width: 60% !important;
+          }
+        }
+      }
+
+      @include breakpoint($md) {
+        padding: 0 60px 0 30px;
+      }
+
+      @include breakpoint($sm) {
+        .panel-item {
+          width: 80% !important;
+          padding: 15px !important;
+        }
+      }
+    }
+  }
+
+  .mobile-view {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 100px 60px 60px 20px;
+    height: 100%;
+    overflow-y: auto;
+    align-items: center;
+
+    .panel-item {
+      backdrop-filter: blur(30px);
+      padding: 25px 43px;
+      max-width: 400px;
+
+      h3 {
+        margin-bottom: 2rem;
+      }
+
+      p {
+        white-space: break-spaces;
+      }
+    }
+  }
+
+  @include breakpoint($lg) {
+    min-height: calc(100vh - #{$header-mobile-h});
+
+    .mobile-view {
+      height: calc(100vh - #{$header-mobile-h});
+    }
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes hidden-up {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes hidden-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}

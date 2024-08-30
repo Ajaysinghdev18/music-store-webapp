@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.d-pagination {
+  display: flex;
+
+  &.right {
+    justify-content: end;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.left {
+    justify-content: flex-start;
+  }
+
+  &-buttons {
+    display: flex;
+
+    button + button {
+      margin-left: 8px;
+    }
+
+    .action-button {
+      padding: 0 !important;
+      min-width: unset !important;
+      width: 54px !important;
+      height: 54px !important;
+      padding: 0 !important;
+
+      @include breakpoint($sm) {
+        width: 30px !important;
+      }
+
+      svg {
+        width: 30px;
+        left: unset;
+
+        @include breakpoint($sm) {
+          width: 15px;
+        }
+      }
+    }
+
+    .page-button {
+      width: 54px !important;
+      height: 54px !important;
+      padding: 0 !important;
+      min-width: unset !important;
+    }
+  }
+}

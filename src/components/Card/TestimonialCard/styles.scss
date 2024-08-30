@@ -1,0 +1,26 @@
+.testimonial-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .gradiant{
+    background: radial-gradient(circle at center, #FB37FF 0, transparent, transparent 100%);
+    position: absolute;
+    display: flex;
+    height: 65%;
+    filter: blur(100px);
+    width: 100%;
+    bottom: 55%;
+    }
+    .img-container{
+     
+        height: 100px;
+        width: 100px;
+        & img{
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

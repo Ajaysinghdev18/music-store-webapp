@@ -1,0 +1,96 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.order-nft-detail-page {
+  position: relative;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($xxl) {
+    margin-top: 25%;
+  }
+
+  @include breakpoint($lg) {
+    margin-top: 20%;
+  }
+
+  @include breakpoint($md) {
+    margin-top: 20%;
+  }
+
+  .order-nft-detail-page-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+    width: 80%;
+    align-self: center;
+    min-height: 300px;
+    @include breakpoint($sm) {
+      width: 90%;
+      flex-direction: column;
+    }
+
+    .page-title-container {
+      width: 30%;
+
+      @include breakpoint($sm) {
+        width: 90%;
+      }
+    }
+
+    button {
+      width: 10%;
+      margin: 50px 0px 0px 113px;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background-color: $white;
+      margin: 0;
+    }
+
+
+
+    @include breakpoint($lg) {
+      margin-right: 0;
+      border-right: 0;
+    }
+
+    @include breakpoint($sm) {
+      min-height: 300px;
+    }
+
+
+    .detail-panel {
+      width: 60%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+      @include breakpoint($sm) {
+        width: 100%;
+      }
+      .detail-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 30px;
+
+      }
+    }
+  }
+  .overflow-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @include breakpoint($xl) {
+      width: 320px;
+    }
+    @include breakpoint($sm) {
+      width: 220px;
+    }
+  }
+}

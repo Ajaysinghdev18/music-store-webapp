@@ -1,0 +1,48 @@
+@import '../../../../styles//mixins';
+@import '../../../../styles/variables';
+
+.add-card-modal-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(30px);
+  z-index: 3;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint($sm) {
+    align-items: flex-start;
+    padding-top: 99px;
+  }
+
+  .add-card-modal {
+    border: 1px solid $lime;
+    max-width: 600px;
+    width: 100%;
+    padding: 50px;
+    position: relative;
+    background-color: $black;
+    margin: 0 45px;
+
+    @include breakpoint($sm) {
+      padding: 40px 15px 45px;
+    }
+
+    .modal-title {
+      margin-bottom: 40px;
+    }
+
+    .label {
+      margin-bottom: 20px;
+
+      @include breakpoint($sm) {
+        margin-bottom: 5px;
+      }
+    }
+
+
+  }
+}

@@ -1,0 +1,350 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.wallet-detail-page {
+  margin: 80px 0 50px;
+  font-family: $font-family1;
+
+  @include breakpoint($sm) {
+    margin-top: 52px;
+    margin-bottom: 30px;
+  }
+
+  .content {
+    backdrop-filter: blur(30px);
+    padding: 68.5px 0;
+    display: flex;
+
+    @include breakpoint($lg) {
+      flex-direction: column;
+    }
+
+    @include breakpoint($lg) {
+      padding: 0;
+    }
+
+    .left-content {
+      width: 379.5px;
+      padding-bottom: 70px;
+      padding-left: 60px;
+      padding-right: 60px;
+      border-right: 1px solid #ffffff;
+      margin-top: 0%;
+      @include breakpoint($xxl) {
+        width: 330px;
+      }
+
+      @include breakpoint($xl) {
+        width: 100%;
+      }
+
+      @include breakpoint($sm) {
+        width: 90%;
+        border-right: none;
+        padding-bottom: 0;
+        align-self: center;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 10%;
+      }
+
+      .wallet-icon-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-bottom: 1px solid white;
+        padding-bottom: 38px;
+
+        .d-update-button {
+          border-radius: 0 !important;
+          cursor: pointer;
+          position: relative;
+          font-family: "GemunuLibre";
+          font-size: 25px !important;
+          line-height: 33px !important;
+          height: 53px !important;
+          /* min-width: 180px !important; */
+          padding: 0 33px !important;
+          background-color: transparent !important;
+          color: #00ff00;
+          border: 1px solid #00ff00;
+        }
+
+        .wallet-icon {
+          width: 64px;
+          margin-bottom: 16px;
+        }
+
+        .name-container {
+          display: flex;
+          align-items: center;
+
+          .edit-icon {
+            width: 24px;
+            margin-left: 16px;
+            color: #707070;
+          }
+        }
+      }
+
+      .switch-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      .form {
+        margin-top: 37px;
+      }
+
+      .input-container {
+        position: relative;
+        margin-bottom: 16px;
+
+        label {
+          color: white;
+          opacity: 0.5;
+          font-size: 16px;
+          display: block;
+          margin-bottom: 8px;
+        }
+
+        input {
+          background: transparent;
+          border: 1px solid white;
+          color: white;
+          padding-right: 40px;
+        }
+
+        .eye-slash {
+          top: 37px !important;
+        }
+
+        svg {
+          position: absolute;
+          right: 16px;
+          top: 40px;
+          width: 16px;
+          @include breakpoint($sm) {
+            top: 30px;
+          } 
+        }
+      }
+
+      .warning {
+        font-size: 16px;
+      }
+
+      .d-outlined-button {
+        margin: 237px auto 0 auto;
+        display: block;
+        @include breakpoint($sm) {
+          margin: 0;
+          margin-top: 10%;
+
+        }
+      }
+    }
+
+    .right-content {
+      flex: 1;
+      padding: 0 60px 0 60px;
+      @include breakpoint($sm) {
+        padding: 0;
+        margin-top: 10%;
+      }
+      .tabs-wrapper {
+        .tabs {
+          display: flex;
+          border-bottom: 1px solid white;
+
+          button {
+            flex-grow: 1;
+            background: transparent;
+            color: white;
+            outline: none !important;
+            box-shadow: none;
+            font-family: $font-family1;
+
+            &.active {
+              color: #00FF00;
+              border-bottom: 2px solid #00FF00;
+            }
+          }
+        }
+
+        .tab-panels {
+          color: white;
+
+          .wallet-nfts {
+            .search-wrapper {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin: 16px 0;
+              @include breakpoint($sm) {
+                flex-direction: column;
+              }
+              .search-input {
+                position: relative;
+
+                input {
+                  flex: 1;
+                  background-color: transparent !important;
+                  border: 1px solid $white;
+                  border-radius: 0;
+                  color: $white;
+                  font-size: 20px;
+                  line-height: 27px;
+                  padding-left: 24px;
+                  height: 33px;
+                  font-family: $font-family1;
+
+                  // &:hover {
+                  // }
+
+                  &:focus {
+                    box-shadow: none;
+                  }
+                }
+
+                svg {
+                  color: $white;
+                  position: absolute;
+                  top: 10px;
+                  left: 8px;
+                  width: 12px;
+                }
+              }
+
+              .dropdown-container {
+                display: flex;
+                @include breakpoint($sm) {
+                  margin-top: 10%;
+                  width: 100%;
+                  display: flex;
+                  justify-content: space-evenly;
+                }
+                .select {
+                  margin-left: 16px;
+                  border-color: white;
+                  width: 130px;
+                  @include breakpoint($sm) {
+                    width: 25%;
+                    margin-left: 0px;
+                  }
+                  &.d-select--opened {
+                    .d-options {
+                      svg {
+                        display: none;
+                      }
+                    }
+                  }
+
+                  .d-selected-option {
+                    padding: 10px;
+                    height: 32px;
+
+                    span {
+                      font-size: 16px !important;
+                    }
+                  }
+
+                  .d-options {
+                    height: unset;
+                  }
+
+                  .d-option {
+                    font-size: 16px !important;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                  }
+
+                  svg {
+                    margin-right: 0;
+                    width: 6px;
+                    color: white;
+                  }
+                }
+              }
+            }
+          }
+
+          .nft-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+
+            @include breakpoint($xxxl) {
+              // padding: 0 30px 0 70px;
+              grid-template-columns: 1fr 1fr;
+            }
+
+            @include breakpoint($lg) {
+              padding: 0px;
+              grid-template-columns: 1fr 1fr;
+            }
+
+            @include breakpoint($md) {
+              padding: 0px;
+              grid-template-columns: 1fr 1fr;
+            }
+
+
+            @include breakpoint($sm) {
+              width: 80%;
+              margin-left: 10%;
+              padding: 0px;
+              grid-template-columns: 1fr;
+
+            }
+          }
+
+          .total-balance-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 47px;
+            margin-bottom: 57px;
+
+            .total-balance {
+              font-size: 65px;
+              font-weight: bold;
+            }
+
+            .label {
+              opacity: 0.5;
+              font-weight: bold;
+            }
+
+            .d-button {
+              margin-left: 16px;
+              min-width: unset !important;
+              padding-right: 20px !important;
+              padding-left: 50px !important;
+              height: 46px !important;
+
+              svg {
+                width: 16px;
+                margin-right: 6px;
+              }
+            }
+          }
+
+          .table {
+            width: 100%;
+
+            thead {
+              border: 1px solid white;
+            }
+
+            button {
+              margin-left: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

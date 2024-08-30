@@ -1,0 +1,35 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.faq-group-page {
+  display: flex;
+  min-height: 790px;
+  padding: 60px;
+
+  .questions {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .group {
+    width: 540px;
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      a {
+        @include text-body1;
+        margin-bottom: 32px;
+        text-decoration: none;
+
+        &.active {
+          color: $magenta;
+        }
+      }
+    }
+  }
+}

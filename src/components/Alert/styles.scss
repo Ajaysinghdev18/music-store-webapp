@@ -1,0 +1,59 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.d-alert {
+  min-width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(30px);
+  margin-bottom: 10px;
+
+  @include breakpoint($md) {
+    min-width: 300px;
+  }
+
+  @include breakpoint($sm) {
+    min-width: 200px;
+  }
+
+  &.lime {
+    background-color: rgba($lime, 0.3);
+
+    .d-alert-message {
+      color: $lime;
+    }
+  }
+
+  &.cyan {
+    background-color: rgba($cyan, 0.3);
+
+    .d-alert-message {
+      color: $cyan;
+    }
+  }
+
+  &.yellow {
+    background-color: rgba($yellow, 0.3);
+
+    .d-alert-message {
+      color: $yellow;
+    }
+  }
+
+  &.red {
+    background-color: rgba($red, 0.3);
+
+    .d-alert-message {
+      color: $red;
+    }
+  }
+
+  &-message {
+    padding: 9px 20px;
+  }
+
+  .d-icon-button {
+    margin-right: 20px;
+  }
+}

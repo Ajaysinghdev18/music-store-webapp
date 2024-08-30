@@ -1,0 +1,31 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/mixins';
+
+.detail {
+  width: 60%;
+  .detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .page-content {
+    padding: 32px 0;
+    margin-bottom: 16px;
+    color: white;
+    border-bottom: 1px solid $white;
+  }
+  .detail-page-footer {
+    padding:16px 32px;
+    border: 1px solid $cyan;
+    margin: 60px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .detail-page-footer-subcontent {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

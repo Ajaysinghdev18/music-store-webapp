@@ -1,0 +1,297 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.profile-page {
+  margin: 80px 0 50px;
+
+  @include breakpoint($sm) {
+    margin-top: 52px;
+    margin-bottom: 30px;
+  }
+
+  .content {
+    backdrop-filter: blur(30px);
+    padding: 68.5px 0;
+    display: flex;
+
+    .kyc-verified-mark {
+      display: flex;
+      div {
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+      }
+    }
+
+    @include breakpoint($lg) {
+      flex-direction: column;
+    }
+
+    @include breakpoint($lg) {
+      padding: 0;
+    }
+
+    .navbar {
+      position: relative;
+      width: 379.5px;
+      padding-bottom: 70px;
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #ffffff;
+
+      @include breakpoint($xxl) {
+        width: 330px;
+      }
+
+      @include breakpoint($xl) {
+        width: 300px;
+      }
+
+      @include breakpoint($lg) {
+        width: 100%;
+        border-right: none;
+        padding-bottom: 0;
+      }
+
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: -110px auto 111px;
+        max-width: 219px;
+
+        @include breakpoint($xl) {
+          max-width: 180px;
+          margin: -100px auto 100px;
+        }
+
+        @include breakpoint($lg) {
+          max-width: unset;
+          margin: -34px auto 40px;
+        }
+
+        @include breakpoint($sm) {
+          margin: -34px auto 26px;
+        }
+
+        .avatar {
+          width: 219px;
+          height: 218px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background: linear-gradient(130deg, $cyan, $magenta);
+          padding: 10px 12px;
+          margin-bottom: 25px;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+
+          &:hover {
+            .avatar-edit-mask {
+              height: 100%;
+            }
+          }
+
+          @include breakpoint($xl) {
+            width: 180px;
+            height: 180px;
+          }
+
+          @include breakpoint($lg) {
+            //width: 105px;
+            //height: 105px;
+            //padding: 5.5px 6px;
+          }
+
+          @include breakpoint($sm) {
+            width: 117px;
+            height: 116px;
+            padding: 5.5px 6px;
+            margin-bottom: 5px;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+
+          .avatar-edit-mask {
+            height: 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            background: linear-gradient(to bottom, #00ffff80, #ff00ff80);
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            overflow: hidden;
+            transition-duration: 100ms;
+            transition-property: height;
+
+            .d-icon {
+              margin-bottom: 18px;
+            }
+          }
+        }
+
+        .avatar-upload {
+          display: none;
+        }
+
+        .kyc-container {
+          padding: 10px;
+          border-radius: 20px;
+
+          &.kyc-verified {
+            background: $lime;
+            font-family: $font-family1;
+          }
+
+          &.kyc-pending {
+            background: $red;
+            font-family: $font-family1;
+          }
+        }
+      }
+
+      .profile-tab-menu {
+        display: grid;
+        gap: 50px;
+        margin-left: 60px;
+
+        @include breakpoint($lg) {
+          margin-left: 0;
+          padding: 0 20px 12px;
+          display: flex;
+          justify-content: space-around;
+          border-bottom: 1px solid $white;
+
+          > div:nth-of-type(3) {
+            display: none;
+          }
+        }
+
+        @include breakpoint($sm) {
+          display: flex;
+          justify-content: space-between;
+          grid-gap: 20px;
+          flex-wrap: wrap;
+        }
+
+        .nav-link {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          transition: 0.5s;
+
+          &.nav-link--active {
+            svg {
+              color: $lime !important;
+            }
+
+            span {
+              color: $lime !important;
+            }
+          }
+
+          &:hover {
+            .d-icon,
+            span {
+              color: $magenta;
+            }
+          }
+
+          .d-icon,
+          span {
+            transition: 0.3s;
+          }
+
+          svg {
+            width: 36px;
+            margin-right: 20px;
+
+            @include breakpoint($xl) {
+              width: 30px;
+            }
+
+            @include breakpoint($lg) {
+              height: 24px;
+            }
+
+            @include breakpoint($sm) {
+              width: auto;
+              height: 15px;
+              margin-right: 5px;
+            }
+          }
+
+          span {
+            @include breakpoint($sm) {
+              font-size: 15px;
+              line-height: 20px;
+              font-weight: bold;
+            }
+
+            .sm-none {
+              @include breakpoint($sm) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      .settings-link {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: none;
+
+        @include breakpoint($lg) {
+          display: block;
+        }
+
+        &.settings-link--active {
+          .d-icon {
+            color: $lime;
+          }
+        }
+      }
+    }
+
+    .tab-section {
+      flex: 1;
+    }
+
+    .payment-background {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      z-index: -1;
+
+      @include breakpoint($lg) {
+        display: none;
+      }
+
+      img {
+        width: 50%;
+      }
+
+      .backdrop {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        backdrop-filter: blur(30px);
+      }
+    }
+  }
+}

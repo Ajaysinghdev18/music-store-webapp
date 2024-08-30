@@ -1,0 +1,15 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+.faq-detail-page {
+  display: flex;
+  flex-direction: column;
+  padding: 0 60px;
+  .faq-detail-page-header {
+    display: flex;
+    //border-top: 1px solid $white;
+  }
+  .faq-detail-page-content {
+    display: flex;
+    margin-top: 40px;
+  }
+}

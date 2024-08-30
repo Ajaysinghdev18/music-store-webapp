@@ -1,0 +1,8 @@
+{
+  "trailingComma": "none",
+  "singleQuote": true,
+  "printWidth": 120,
+  "importOrder": ["^components/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

@@ -1,0 +1,134 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.d-select {
+  color: $white;
+  border: 1px solid $lime;
+  cursor: pointer;
+  position: relative;
+
+  &.d-select--cyan {
+    border-color: $cyan;
+
+    .d-selected-option {
+      .d-icon {
+        color: $cyan;
+      }
+    }
+
+    .d-options {
+      outline-color: $cyan;
+
+      .d-icon {
+        color: $cyan;
+      }
+
+      .d-option {
+        &:hover {
+          color: $cyan  !important;
+        }
+      }
+    }
+  }
+
+  &.d-select--opened {
+    background-color: transparent;
+
+    .d-options {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &.d-select--error {
+    border-color: $red;
+
+    .d-selected-option {
+      .d-icon {
+        color: $red;
+      }
+    }
+  }
+
+  .d-selected-option {
+    height: 51px;
+    //background-color: $black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include breakpoint($sm) {
+      height: 31px;
+    }
+
+    .d-icon {
+      color: $lime;
+    }
+  }
+
+  .d-selected-option-2 {
+    height: 51px;
+    //background-color: $black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .place-holder {
+      color: #707070;
+    }
+
+    @include breakpoint($sm) {
+      height: 31px;
+    }
+
+    .d-icon {
+      color: $lime;
+    }
+  }
+
+  .d-options {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    outline: 1px solid $lime;
+    background-color: $black;
+    z-index: 1;
+    height: 124px;
+    overflow: auto;
+
+    .d-icon {
+      float: right;
+      color: $lime;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+
+    .d-option {
+      color: white;
+      position: relative;
+      padding: 10px 20px 10px 30px;
+
+      &:hover {
+        color: $lime  !important;
+      }
+    }
+
+    .d-option-2 {
+      color: white;
+      position: relative;
+      padding: 10px 20px 10px 16px;
+
+      &:hover {
+        color: $lime  !important;
+      }
+    }
+  }
+}

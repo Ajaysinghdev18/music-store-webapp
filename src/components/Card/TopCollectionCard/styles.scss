@@ -1,0 +1,67 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.top-collection-card-container{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px;
+    @include breakpoint($sm) {
+        width: 100%;
+    }
+    .top-collection-image-container{
+        width: 400px;
+        height: 425px;
+        @include breakpoint($xxxxl) {
+            width: 100%;
+            height: 355px; 
+        }
+        @include breakpoint($sm) {
+            width: 100%;
+            height: 255px; 
+        }
+    }
+    .top-collection-content-container{
+        display: flex;
+        flex-direction: row;
+        height: 30%;
+        align-items: end;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+.top-collection-small-container{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    .top-small-image-container{
+        margin-left: 5%;
+        height: 100%;
+        @include breakpoint($xl){
+            margin-left: 0%;
+            width: 50%;
+        }
+        & img{
+            width: 147px;
+            height: 147px;
+            object-fit: contain;
+            @include breakpoint($xl) {
+                width: 100%;
+                height: 100%; 
+                object-fit: cover;
+            }
+        }
+    }
+    .top-collection-small-content-container{
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        margin-left: 5%;
+        height: 100%;
+        justify-content: space-between;
+        @include breakpoint($xl){
+            width: 50%;
+        }
+    }
+}

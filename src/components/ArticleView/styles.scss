@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+.carousel.carousel-slider{
+  display: flex;
+}
+.arrow-button{
+  height: 120px !important;
+  width: 160px !important;
+  align-self: center;
+  backdrop-filter: blur(30px) !important;
+  border: white 2px solid !important;
+  @include breakpoint($xxxl){
+    height: 80px !important;
+    width: 80px !important;
+  }
+  @include breakpoint($lg){
+    height: 60px !important;
+    width: 70px !important;
+  }
+  @include breakpoint($md){
+    height: 30px !important;
+    width: 40px !important;
+  }
+}
+.article {
+  border: 1px solid grey;
+  margin: 10px 0;
+  .article-image{
+    height: 500px;
+    @include breakpoint($xxxl){
+      height: 400px;
+    }
+    @include breakpoint($sm){
+      height: 300px;
+    }
+  }
+  .article-text{
+    margin-bottom: 3%;
+    padding:5%
+  }
+}
+
+.article-list {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include breakpoint($xl) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint($sm) {
+    padding: 0 20px;
+  }
+}
+

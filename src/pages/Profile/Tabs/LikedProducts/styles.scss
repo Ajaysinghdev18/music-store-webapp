@@ -1,0 +1,56 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/variables';
+
+:root {
+  --grid-columns: 2; // Default number of columns
+}
+
+@include breakpoint($xxxxxxl) {
+  :root {
+  --grid-columns: 5;
+  }
+}
+
+@include breakpoint($xxxxxl) {
+  :root {
+  --grid-columns: 5;
+  }
+}
+
+@include breakpoint($xxxxl) {
+  :root {
+  --grid-columns: 2;
+  }
+}
+
+@include breakpoint($xxl) {
+  :root {
+  --grid-columns: 2;
+  }
+}
+
+@include breakpoint($xl) {
+  :root {
+  --grid-columns: 2 ;
+  }
+}
+
+@include breakpoint($lg) {
+  :root {
+  --grid-columns: 2;
+  }
+}
+
+@include breakpoint($sm) {
+  :root {
+  --grid-columns: 1;
+  }
+}
+
+.liked-products-tab {
+  padding: 0 60px 0 107.5px;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: 10px;
+
+}

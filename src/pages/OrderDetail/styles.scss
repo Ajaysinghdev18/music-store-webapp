@@ -1,0 +1,282 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.order-detail-page {
+  .content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+
+    .divider-horizontal {
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      left: 66%;
+      background-color: #ffffff;
+
+      @include breakpoint($md) {
+        display: none;
+      }
+    }
+
+    .header-container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      .header-left-container {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        justify-content: end;
+
+        @include breakpoint($md) {
+          width: 100%;
+        }
+
+        .header-left {
+          display: flex;
+          flex-direction: row;
+          width: 80%;
+
+          @include breakpoint($xl) {
+            width: 90%;
+          }
+
+          .heading {
+            width: 33%;
+          }
+        }
+      }
+
+      .header-right {
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+
+        @include breakpoint($md) {
+          display: none;
+        }
+      }
+    }
+
+    .divider {
+      width: 100vw;
+      height: 1px;
+      background-color: $white;
+      margin: 1% 0px 1% 0px;
+    }
+
+    .table-container {
+      display: flex;
+
+      @include breakpoint($md) {
+        flex-direction: column;
+      }
+
+      .product-container {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+
+        @include breakpoint($md) {
+          min-height: 400px;
+          width: 100%;
+
+        }
+
+        .product-row {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: end;
+          margin-bottom: 15px;
+          margin-top: 15px;
+
+          .product {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            @include breakpoint($xl) {
+              width: 90%;
+            }
+
+            @include breakpoint($sm) {
+              width: 95%;
+            }
+
+            .product-name {
+              width: 33%;
+              display: flex;
+              align-items: center;
+
+              @include breakpoint($md) {
+                width: 100%;
+              }
+
+              .product-image {
+                margin-right: 5%;
+              }
+            }
+
+            .product-category {
+              width: 33%;
+              align-items: center;
+              display: flex;
+
+              @include breakpoint($md) {
+                width: 100%;
+              }
+            }
+
+            .product-price {
+              width: 33%;
+              align-items: center;
+              display: flex;
+
+              @include breakpoint($md) {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+      }
+
+      .summary-container {
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+
+        @include breakpoint($md) {
+          width: 100%;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .detail-panel-title {
+          display: none;
+
+          @include breakpoint($md) {
+            display: flex;
+          }
+        }
+
+        .divider {
+          display: none;
+
+          @include breakpoint($md) {
+            display: flex;
+          }
+        }
+
+        .summary {
+          padding-top: 30px;
+          display: grid;
+          gap: 30px;
+
+
+          .detail-item {
+            display: flex;
+            justify-content: space-between;
+
+            >span:first-of-type {
+              color: darken($white, 50%);
+            }
+
+            >span:last-of-type {
+              text-align: right;
+
+              span {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                margin-top: 10px;
+
+                .d-icon {
+                  margin-right: 10px;
+                }
+              }
+            }
+          }
+
+          .divider {
+            width: 100%;
+            height: 1px;
+            background-color: $white;
+          }
+
+          .detail-steps {
+            display: flex;
+            align-items: flex-start;
+
+            .detail-step {
+              display: flex;
+              margin-top: 5px;
+              width: 10%;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+
+              span {
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $white;
+              }
+
+              .step-divider {
+                height: 130px;
+                border-left: 1px dotted $white;
+              }
+            }
+
+            .detail-step-content {
+              // width: 466px;
+              position: relative;
+              width: 90%;
+
+              .label {
+                margin-bottom: 16px;
+              }
+
+              .detail-description {
+                height: 103px;
+                color: darken($white, 50%);
+
+                .crypto-item {
+                  display: flex;
+                  align-items: center;
+                  margin-top: 5px;
+                  color: currentColor;
+
+                  .d-icon {
+                    margin-right: 5px;
+                  }
+                }
+
+                .customer-email {
+                  color: opacify($cyan, 0.5);
+                }
+              }
+            }
+          }
+
+          .detail-actions {
+            .back-button {
+              width: 180px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

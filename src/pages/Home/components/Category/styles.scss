@@ -1,0 +1,125 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.category {
+  border: 1px solid $white;
+  cursor: pointer;
+  transition: all ease 0.3s;
+
+  &:hover {
+    border-color: $magenta;
+
+    .disc-wrapper {
+      .disc-cover {
+        left: calc(50% - 200px / 2 - 68px);
+
+        @include breakpoint($lg) {
+          left: calc(50% - 140px / 2 - 50px);
+        }
+
+        @include breakpoint($sm) {
+          left: calc(50% - 100px / 2 - 40px);
+        }
+      }
+
+      .disc {
+        transform: rotate(120deg);
+        margin-left: 140px;
+
+        @include breakpoint($lg) {
+          margin-left: 100px;
+        }
+
+        @include breakpoint($sm) {
+          margin-left: 65px;
+        }
+      }
+    }
+
+    .category-name {
+      border-top-color: $magenta;
+    }
+  }
+
+  .disc-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 427px;
+
+    @include breakpoint($xxl) {
+      min-height: 380px;
+    }
+
+    @include breakpoint($lg) {
+      min-height: 300px;
+    }
+
+    @include breakpoint($sm) {
+      min-height: 180px;
+    }
+
+    .disc-cover {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      backdrop-filter: blur(30px);
+      left: calc(50% - 200px / 2 - 18px);
+      transition-duration: 300ms;
+      transition-property: left;
+
+      @include breakpoint($lg) {
+        width: 140px;
+        height: 140px;
+        left: calc(50% - 140px / 2 - 12px);
+      }
+
+      @include breakpoint($sm) {
+        width: 100px;
+        height: 100px;
+        left: calc(50% - 100px / 2 - 12px);
+      }
+    }
+
+    .disc {
+      border-radius: 50%;
+      overflow: hidden;
+      margin-left: 28px;
+      position: relative;
+      transition-duration: 300ms;
+
+      @include breakpoint($xxl) {
+        width: 150px;
+        height: 150px;
+      }
+
+      @include breakpoint($lg) {
+        width: 120px;
+        height: 120px;
+        margin-left: 18px;
+      }
+
+      @include breakpoint($sm) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  .category-name {
+    border-top: 1px solid $white;
+    text-align: center;
+    padding: 30px 0;
+
+    @include breakpoint($lg) {
+      padding: 20px 0;
+    }
+
+    @include breakpoint($sm) {
+      padding: 10px 0;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}

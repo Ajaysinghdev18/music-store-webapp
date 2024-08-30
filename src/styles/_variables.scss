@@ -1,0 +1,39 @@
+// Colors
+$white: #ffffff;
+$black: #000000;
+$red: #ff0000;
+$lime: #00ff00;
+$magenta: #ff00ff;
+$cyan: #00ffff;
+$yellow: #ffff00;
+$grey: #707070;
+
+// Fonts
+$font-family1: 'GemunuLibre'; //SegoeUI
+$font-family2: 'GemunuLibre';
+
+// Breakpoints
+$xxs: 375px;
+$xs: 425px;
+$sm: 580px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$xxxl: 1500px;
+$xxxxl: 1920px;
+$xxxxxl: 2048px;
+$xxxxxxl: 2730px;
+$xxxxxxxl: 4096px;
+$xxxxxxxxl: 8192px;
+
+// Header
+$header-h: 100px;
+$header-mobile-h: 50px;
+$header-z-index: 100;
+
+// Perfect scrollbar
+$scrollbar-z-index: $header-z-index - 1;
+
+// Transition
+$page-transition-duration: 1s;

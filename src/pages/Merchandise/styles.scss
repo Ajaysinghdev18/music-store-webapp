@@ -1,0 +1,97 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+:root {
+  --grid-columns: 3; // Default number of columns
+}
+
+@include breakpoint($xxxxxxl) {
+  :root {
+  --grid-columns: 6;
+  }
+}
+
+@include breakpoint($xxxxxl) {
+  :root {
+  --grid-columns: 5;
+  }
+}
+
+@include breakpoint($xxxxl) {
+  :root {
+  --grid-columns: 4;
+  }
+}
+
+@include breakpoint($xxl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($xl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($lg) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($sm) {
+  :root {
+  --grid-columns: 2;
+  }
+}
+
+.shop-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+  .toolbar-container {
+    display: flex;
+    justify-content: center;
+
+    .toolbar {
+      backdrop-filter: blur(30px);
+      display: flex;
+      align-items: baseline;
+      width: 95%;
+      align-self: center;
+      justify-content: space-between;
+      padding: 5% 0;
+
+      .actions {
+        width: 10%;
+        justify-content: space-between;
+        display: flex;
+        @include breakpoint($md) {
+          width: 15%;
+        }
+      }
+    }
+  }
+
+  .divider {
+    height: 1px;
+    background-color: $white;
+  }
+
+  .content {
+    backdrop-filter: blur(30px);
+    display: flex;
+    width: 80%;
+    align-self: center;
+    flex-direction: column;
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(var(--grid-columns), 1fr);
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,608 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.home-container {
+    display: flex;
+    justify-self: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+
+    @include breakpoint($sm) {
+        margin-top: 0px;
+    }
+
+    .home-gradiant-1 {
+        position: absolute;
+        top: -3%;
+        left: -9%;
+        width: 633.788px;
+        height: 636.579px;
+        transform: rotate(76.66deg);
+        flex-shrink: 0;
+        border-radius: 636.579px;
+        background: linear-gradient(180deg, #FB03F5 0%, #AA9CFF 100%);
+        z-index: 98;
+        filter: blur(94.70753479px);
+
+        @include breakpoint($sm) {
+            width: 250.788px;
+            height: 250.579px;
+        }
+    }
+
+    .home-gradiant-2 {
+        position: absolute;
+        top: 2%;
+        left: -6%;
+        width: 546.55px;
+        height: 546.55px;
+        transform: rotate(-22.538deg);
+        flex-shrink: 0;
+        border-radius: 346.55px;
+        background: linear-gradient(180deg, #2603FB 0%, #DC06FF 100%);
+        filter: blur(176.7325286865px);
+
+        @include breakpoint($sm) {
+            width: 250.788px;
+            height: 250.579px;
+        }
+    }
+
+    .home-gradiant-3 {
+        position: absolute;
+        top: -3%;
+        left: 7%;
+        width: 697.406px;
+        height: 818.518px;
+        transform: rotate(54.351deg);
+        flex-shrink: 0;
+        border-radius: 818.518px;
+        background: linear-gradient(264deg, #7000FF 0%, #06FFF0 100%);
+        filter: blur(133.9701538086px);
+
+        @include breakpoint($sm) {
+            width: 250.788px;
+            height: 250.579px;
+        }
+    }
+
+    .hero-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        z-index: 100;
+        backdrop-filter: blur(2px);
+        position: relative;
+
+        @include breakpoint($sm) {
+            flex-direction: column;
+        }
+
+        .right-container {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+
+            @include breakpoint($xl) {
+                width: 100%;
+                ;
+            }
+
+        }
+
+        .left-container {
+            width: 55%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            backdrop-filter: blur(30px);
+            top: 60%;
+            left: 5%;
+            position: absolute;
+            padding: 2%;
+
+            @include breakpoint($xxxl) {
+                width: 75%;
+                padding: 2%;
+                top: 50%;
+            }
+
+            @include breakpoint($xxl) {
+                width: 75%;
+                padding: 2%;
+                top: 50%;
+            }
+
+            @include breakpoint($xl) {
+                width: 75%;
+                padding: 2%;
+                top: 45%;
+            }
+
+            @include breakpoint($lg) {
+                width: 75%;
+                padding: 1%;
+                top: 35%;
+            }
+
+            @include breakpoint($sm) {
+                // width: 75%;
+                // padding: 1%;
+                // top: 20%;
+                position: initial;
+                width: 100%;
+                padding: 7%;
+            }
+        }
+    }
+
+    .crypto-art-container-video {
+        @include breakpoint($sm) {
+            flex-direction: column !important;
+        }
+    }
+
+    .crypto-art-container {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        margin-top: 10%;
+        margin-bottom: 10%;
+
+
+        @include breakpoint($sm) {
+            flex-direction: column-reverse;
+            align-items: center;
+            width: 90%;
+        }
+
+        .left-container {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+
+            @include breakpoint($xl) {
+                width: 50%;
+            }
+
+            @include breakpoint($sm) {
+                width: 100%;
+                margin-top: 10%;
+                justify-content: center;
+            }
+
+            .card {
+                // width: 100%;
+                // height: 755px;
+
+                // @include breakpoint($xxxxxl) {
+                //     width: 100%;
+                //     height: 755px;
+                // }
+
+                // @include breakpoint($xxxxl) {
+                //     width: 100%;
+                //     height: 655px;
+                // }
+
+                // @include breakpoint($xxl) {
+                //     width: 100%;
+                //     height: 555px;
+                // }
+
+                // @include breakpoint($lg) {
+                //     width: 100%;
+                //     height: 455px;
+                // }
+
+                // @include breakpoint($sm) {
+                //     width: 100%;
+                //     height: 400px;
+                // }
+            }
+        }
+
+        .right-container {
+            width: 45%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            @include breakpoint($xl) {
+                width: 40%;
+            }
+
+            @include breakpoint($sm) {
+                width: 100%;
+                margin-top: 10%;
+            }
+        }
+    }
+
+    .scroll-container {
+        width: 100%;
+        margin-bottom: 3%;
+        margin-top: 3%;
+        align-items: center;
+        display: flex;
+        height: 76px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+
+        @include breakpoint($lg) {
+            height: 50px;
+            margin-bottom: 5%;
+            margin-top: 5%;
+        }
+    }
+
+    .supported-chain {
+        width: 60%;
+        display: flex;
+
+        justify-content: space-between;
+        margin-top: 1%;
+        margin-bottom: 1%;
+
+        @include breakpoint($xl) {
+            width: 90%;
+        }
+
+        @include breakpoint($sm) {
+            display: flex;
+            justify-content: center;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .image-container {
+            height: 40px;
+            width: 150px;
+
+            @include breakpoint($lg) {
+                width: 100px;
+                height: 20px;
+            }
+
+            & img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .club-house-section {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+
+        @include breakpoint($lg) {
+            flex-direction: column;
+        }
+
+        .left-container {
+            width: 40%;
+            display: flex;
+            align-items: center;
+
+            @include breakpoint($lg) {
+                width: 100%;
+                margin-top: 5%;
+            }
+        }
+
+        .right-container {
+            width: 50%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            border: 1px solid white;
+            margin-top: 5%;
+            margin-bottom: 10%;
+
+            @include breakpoint($xxxl) {
+                width: 50%;
+            }
+
+            @include breakpoint($lg) {
+                width: 70%;
+                justify-content: center;
+                align-self: center;
+            }
+
+            @include breakpoint($md) {
+                // display: none;
+                width: 100%;
+            }
+
+            .card {
+                // width: 504px;
+                width: 100%;
+                height: 585px;
+            }
+
+        }
+    }
+
+    .link-section {
+        display: flex;
+        width: 70%;
+        justify-content: space-between;
+        margin-top: 5%;
+        position: relative;
+
+        @include breakpoint($md) {
+            width: 50%;
+            margin-top: 5%;
+            display: grid;
+            justify-items: center;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        @include breakpoint($sm) {
+            width: 100%;
+        }
+
+        .gradiant-link {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(126deg, #9B51E0 0%, #3081ED 100%);
+            position: absolute;
+            border-radius: 490.219px;
+            filter: blur(100px);
+        }
+
+        .gradiant-link-circle {
+            border-radius: 490.219px;
+            background: linear-gradient(180deg, #2603FB 0%, #DC06FF 100%);
+            filter: blur(250px);
+            position: absolute;
+            width: 518.219px;
+            height: 509.219px;
+            transform: rotate(-22.538deg);
+            flex-shrink: 0;
+            top: 33%;
+            left: 64%;
+        }
+    }
+
+    .nft-section {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        margin-top: 10%;
+        margin-bottom: 5%;
+
+        @include breakpoint($lg) {
+            flex-direction: column-reverse;
+        }
+
+        .left-section {
+            display: flex;
+            width: 40%;
+            height: fit-content;
+
+            .carousel-container {
+                width: 100%;
+                height: auto;
+            }
+            @include breakpoint($xl) {
+                width: 50%;
+            }
+            @include breakpoint($lg) {
+                display: flex;
+                width: 100%;
+                justify-content: space-evenly;
+                margin-top: 20%;
+                margin-bottom: 20%;
+            }
+
+            @include breakpoint($sm) {
+                display: flex;
+                width: 100%;
+                justify-content: space-evenly;
+            }
+
+            .nft-card-left-section {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
+                margin-right: 5%;
+
+                .nft-card-section {
+                    width: 250px;
+                    height: 269px;
+                    margin-bottom: 5%;
+
+                    @include breakpoint($xl) {
+                        width: 180px;
+                        height: 250px;
+                    }
+
+                    @include breakpoint($sm) {
+                        width: 150px;
+                        height: 180px;
+                    }
+                }
+            }
+
+            .nft-card-right-section {
+                display: flex;
+                flex-direction: column;
+                margin-top: 70px;
+                margin-left: 5%;
+
+                .nft-card-section {
+                    width: 250px;
+                    height: 269px;
+                    margin-top: 5%;
+
+                    @include breakpoint($xl) {
+                        width: 180px;
+                        height: 250px;
+                    }
+
+                    @include breakpoint($sm) {
+                        width: 150px;
+                        height: 180px;
+                    }
+                }
+            }
+        }
+
+        .right-section {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            @include breakpoint($lg) {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+
+    .article-section::-webkit-scrollbar {
+        display: none;
+    }
+
+    .article-section {
+        display: flex;
+        width: 80%;
+        margin-top: 5%;
+        justify-content: space-between;
+
+        @include breakpoint($sm) {
+            display: flex;
+            width: 100%;
+            z-index: 100;
+            flex-wrap: nowrap;
+            overflow: auto;
+        }
+
+        .card {
+            width: 403px;
+            height: 500px;
+
+            @include breakpoint($lg) {
+                width: 303px;
+                height: 400px;
+            }
+
+            @include breakpoint($sm) {
+                width: 203px;
+                height: 300px;
+                flex: 0 0 auto;
+                margin: 20px;
+            }
+        }
+    }
+
+    .collection-section {
+        .collection-gradiant {
+            display: flex;
+            position: absolute;
+            width: 490.219px;
+            height: 490.219px;
+            transform: rotate(-22.538deg);
+            flex-shrink: 0;
+            border-radius: 490.219px;
+            background: linear-gradient(256deg, #2603FB 0%, #DC06FF 100%);
+            filter: blur(185px);
+            top: 21%;
+            left: 61%;
+        }
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 5%;
+        align-items: center;
+        margin-bottom: 5%;
+        padding-bottom: 5%;
+        justify-content: space-between;
+        background: rgba(255, 255, 255, 0.09);
+        box-shadow: 2.009999990463257px -2.009999990463257px 20px 0px rgba(214, 214, 214, 0.17) inset;
+        backdrop-filter: blur(25px);
+
+        .collection-scrollbar {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+
+            @include breakpoint($xl) {
+                width: 70%;
+                height: 400px;
+                overflow: auto;
+                flex-wrap: nowrap;
+            }
+
+            @include breakpoint($lg) {
+                width: 100%;
+                height: 300px;
+                overflow: auto;
+                flex-wrap: nowrap;
+            }
+
+            .card {
+                width: 30%;
+                height: 489px;
+
+                @include breakpoint($xl) {
+                    height: 300px;
+                    width: 300px;
+                    flex: 0 0 auto;
+                    margin: 20px;
+                }
+
+                @include breakpoint($lg) {
+                    height: 250px;
+                    width: 250px;
+                    flex: 0 0 auto;
+                    margin: 20px;
+                }
+            }
+        }
+
+
+    }
+
+    .discover-section {
+        display: flex;
+        width: 80%;
+        margin-top: 5%;
+        justify-content: space-between;
+    }
+
+    .web-asset-container {
+        width: 80%;
+        align-self: center;
+        margin-bottom: 2%;
+        margin-top: 2%;
+    }
+
+    .testimonial-section {
+        display: flex;
+        width: 80%;
+        margin-top: 5%;
+        justify-content: space-between;
+
+        .card {
+            width: 403px;
+            height: 209px;
+        }
+    }
+}

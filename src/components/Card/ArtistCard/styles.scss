@@ -1,0 +1,47 @@
+.artist-statement-container {
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.00) -2.13%, rgba(255, 255, 255, 0.15) 136.58%), linear-gradient(169deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%);
+    backdrop-filter: blur(555px);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.artist-banner-card-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    position: relative;
+    backdrop-filter: blur(20px);
+    border: 1.084px solid #FB37FF;
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.00) -2.13%, rgba(255, 255, 255, 0.15) 136.58%), linear-gradient(169deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%);
+    backdrop-filter: blur(687.2084350585938px);
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    .artist-banner-image-container {
+        height: 80%;
+        width: 100%;
+        background-color: black;
+        z-index: 100;
+        & img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .gradiant {
+        top: 5%;
+        width: 376.417px;
+        height: 376.417px;
+        flex-shrink: 0;
+        position: absolute;
+        border-radius: 376.417px;
+        background: #FB37FF;
+        filter: blur(123.82134246826172px);
+    }
+
+}

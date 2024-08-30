@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.d-stepper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 13px;
+    height: 1px;
+    background-color: white;
+    width: 100%;
+
+    @include breakpoint($md) {
+      bottom: 11px;
+    }
+
+    @include breakpoint($sm) {
+      bottom: 7px;
+    }
+  }
+
+  &.completed {
+   &::after {
+     height: 3px;
+     background-color: #00ffff;
+   }
+  }
+}

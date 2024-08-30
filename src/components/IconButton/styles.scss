@@ -1,0 +1,67 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.icon-button-text {
+  font-family: $font-family1;
+  font-size: 18px;
+}
+
+.d-icon-button {
+  border: none;
+  cursor: pointer;
+  font-family: $font-family1;
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  min-width: unset !important;
+  height: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+
+  &:not(:disabled):hover {
+    svg {
+      color: $magenta !important;
+    }
+  }
+
+  &:not(:disabled):active {
+    svg {
+      color: darken($magenta, 10%) !important;
+    }
+  }
+
+  &:disabled {
+    opacity: 1 !important;
+    color: darken($white, 0.1) !important;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &.d-icon-button--cyan {
+    color: $cyan;
+
+    svg {
+      color: currentColor;
+    }
+  }
+
+  &.d-icon-button--magenta {
+    color: $magenta;
+
+    svg {
+      color: currentColor;
+    }
+  }
+
+  &.d-icon-button--lime {
+    color: $lime;
+
+    svg {
+      color: currentColor;
+    }
+  }
+}

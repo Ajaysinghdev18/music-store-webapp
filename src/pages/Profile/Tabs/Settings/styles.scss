@@ -1,0 +1,213 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.profile-settings-tab {
+  height: 100%;
+  position: relative;
+  //margin: auto;
+  padding: 0 60px 0 73.5px;
+  
+
+  @include breakpoint($xl) {
+    padding: 0 20px;
+  }
+
+  @include breakpoint($lg) {
+    padding: 30px 80px;
+  }
+
+  @include breakpoint($sm) {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include breakpoint(425px) {
+    padding: 0;
+  }
+.form-container{
+
+
+  @include breakpoint($sm) {
+  width: 90%;
+  }
+
+  .tabs {
+    display: flex;
+    padding-bottom: 2px;
+    border-bottom: 1px solid white;
+    margin-bottom: 40px;
+
+    .tab {
+      font-size: 1.25rem;
+      line-height: 20px;
+      font-weight: 700;
+      flex-grow: 1;
+      background: transparent;
+      color: #ffffff80;
+      outline: none !important;
+      box-shadow: none;
+      font-family: $font-family1;
+
+      @include breakpoint(425px) {
+        padding: 0;
+      }
+
+      &:hover {
+        color: $white;
+      }
+
+      &.active {
+        color: #00ff00;
+        border-bottom: 2px solid #00ff00;
+      }
+    }
+  }
+
+  .form-group {
+    width: 414px;
+    @include breakpoint($sm) {
+      // padding: 80%;
+      width: 100%;
+    }
+    .d-text-field + .d-text-field {
+      margin-top: 40px;
+    }
+  }
+
+  .notification-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      td {
+        text-transform: uppercase;
+        border-top: 1px solid #ffffff80;
+        border-bottom: 1px solid #ffffff80;
+
+        &:first-of-type {
+          border-left: 1px solid #ffffff80;
+        }
+
+        &:last-of-type {
+          border-right: 1px solid #ffffff80;
+        }
+
+        .head-label {
+          display: flex;
+          justify-content: end;
+
+          svg {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+
+    td {
+      padding: 8px 16px;
+      color: $white;
+      font-family: $font-family1;
+      font-size: 16px;
+      line-height: 20px;
+
+      h6 {
+        font-size: 1.25rem;
+        line-height: 28px;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+
+      .description {
+        color: #ffffff80;
+      }
+    }
+  }
+
+  .save-button {
+    position: absolute;
+    bottom: 0;
+    right: 73.5px;
+  }
+
+  .account-container {
+    height: 436px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .info-field {
+      height: 100px;
+      border: 1px solid #00ffff;
+      display: flex;
+      // Grid: auto / 40% 40% 20%;
+      align-items: center;
+      padding: 10px 1.25rem;
+      justify-content: space-between;
+
+      .name-email {
+        align-items: center;
+        padding-left: 1rem;
+        .name {
+          font-family: $font-family1;
+          font-size: 2.25rem;
+          color: white;
+        }
+        .email {
+          font-size: 1rem;
+          font-family: $font-family1;
+          color: #707070;
+        }
+      }
+
+      .typo-body {
+        font-size: 1.25rem;
+        color: white;
+        padding-left: 1rem;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: Helvetica;
+      }
+
+      .text-green {
+        color: #00ff00;
+      }
+
+      .text-yellow {
+        color: #ffff00;
+      }
+
+      .edit-btn {
+        background-color: #00ffff;
+        height: 52px;
+        width: 112px;
+        text-align: center;
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-decoration: none;
+        color: black;
+        margin-left: auto;
+        cursor: pointer;
+      }
+    }
+
+    .info-icon {
+      height: 3.25rem;
+      width: 3.25rem;
+    }
+
+    .flex {
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-icon {
+      padding-left: 2px;
+    }
+  }
+}
+}

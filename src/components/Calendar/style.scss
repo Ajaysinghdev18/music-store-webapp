@@ -1,0 +1,145 @@
+//* {
+//  margin: 0;
+//  box-sizing: border-box;
+//  color: white;
+//  font-size: 1.25rem;
+//  font-family: Arial;
+//}
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: solid 1px cyan;
+  background-color: black;
+  z-index: 1000;
+  position: relative;
+  margin-top: 15px;
+}
+
+.calendar-head,
+.calendar-body {
+  //display: flex;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr)
+}
+
+.year-list {
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+
+    &:hover, &.current-year {
+      color: white;
+      background-color: cyan;
+
+    }
+  }
+}
+
+.calendar-head div,
+.calendar-body div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.calendar-body {
+  .day-item {
+    color: white;
+
+    &:hover, .current-day {
+      color: black;
+      background-color: cyan;
+      cursor: pointer;
+    }
+  }
+}
+
+.calendar-body .day-item:hover,
+.calendar-body .current-day {
+  color: black;
+  background-color: cyan;
+  cursor: pointer;
+}
+
+.divider {
+  border-bottom: solid 2px gray;
+}
+
+.month-year-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.month-bar,
+.year-bar {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  cursor: default;
+  position: relative;
+  .months-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    top: 30px;
+
+    .month {
+      color: black;
+      border: 1px solid cyan;
+      padding: 0 10px;
+      width: 70px;
+      font-size: 16px;
+
+      &:hover {
+        background: cyan;
+      }
+    }
+  }
+}
+
+.month-bar > span:hover,
+.year-bar > span:hover {
+  color: cyan;
+  cursor: pointer;
+}
+
+.month-year-bar span {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.month-bar > div,
+.year-bar > div {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.month-bar p span,
+.year-bar p span {
+  font-size: 1rem;
+}
+
+.pointer-triangle {
+  background: black;
+  top: -10px;
+  border-right: 1px solid cyan;
+  border-top: 1px solid cyan;
+  transform: rotate(-45deg);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 50px;
+}

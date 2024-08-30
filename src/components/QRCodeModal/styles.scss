@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+
+.qr-modal-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(30px);
+  z-index: 3;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .qr-modal {
+    border: 1px solid $lime;
+    max-width: 730px;
+    width: 100%;
+    padding: 50px;
+    position: relative;
+    background-color: $black;
+
+    .d-icon-button {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+
+      .d-icon {
+        color: $lime;
+      }
+    }
+
+    .modal-title {
+      margin-bottom: 40px;
+    }
+
+    .qr-modal-content {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 312px;
+        height: 312px;
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+span {
+  color: $white;
+  margin: 0;
+}
+
+.text-heading1 {
+  @include text-heading1;
+}
+
+.text-heading2 {
+  @include text-heading2;
+}
+
+.text-heading3 {
+  @include text-heading3;
+}
+
+.text-heading4 {
+  @include text-heading4;
+}
+.text-body {
+  @include text-body;
+}
+
+.text-body1 {
+  @include text-body1;
+}
+
+.text-body2 {
+  @include text-body2;
+}
+
+.text-body3 {
+  @include text-body3;
+}
+
+.text--white {
+  color: $white;
+}
+
+.text--black {
+  color: $black;
+}
+
+.text--lime {
+  color: $lime;
+}
+.text--underline {
+  text-decoration: underline;
+}
+.pointer--cursor{
+  cursor: pointer;
+}
+.text--cyan {
+  color: $cyan;
+}
+
+.text--yellow {
+  color: $yellow;
+}
+
+.text--magenta {
+  color: $magenta;
+}
+
+.text--red {
+  color: $red;
+}
+
+.text--no-underline {
+  text-decoration: none;
+}
+
+.text--center {
+  text-align: center;
+}
+.text--left {
+  text-align: left;
+}
+.text--justify {
+  text-align: justify;
+}
+.text--right {
+  text-align: right;
+}
+
+.text--regular {
+  font-weight: 400;
+}
+
+.text--semibold {
+  font-weight: 600;
+}
+
+.text-bold {
+  font-weight: bold;
+}

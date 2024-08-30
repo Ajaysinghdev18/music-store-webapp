@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="188" viewBox="0 0 300 188">
+    <g id="Group_3089" data-name="Group 3089" transform="translate(-800 -476)">
+        <rect id="Rectangle_2795" data-name="Rectangle 2795" width="300" height="188" rx="8" transform="translate(800 476)" fill="#fff"/>
+        <path id="Rectangle_2796" data-name="Rectangle 2796" d="M8,0H292a8,8,0,0,1,8,8V40a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V8A8,8,0,0,1,8,0Z" transform="translate(800 476)" fill="aqua"/>
+        <g id="Group_3087" data-name="Group 3087">
+            <rect id="Rectangle_2798" data-name="Rectangle 2798" width="105" height="12" rx="2" transform="translate(940 536)" fill="#d1d1d1"/>
+            <rect id="Rectangle_2799" data-name="Rectangle 2799" width="140" height="12" rx="2" transform="translate(940 560)" fill="#d1d1d1"/>
+            <rect id="Rectangle_2800" data-name="Rectangle 2800" width="140" height="12" rx="2" transform="translate(940 584)" fill="#d1d1d1"/>
+            <rect id="Rectangle_2801" data-name="Rectangle 2801" width="140" height="12" rx="2" transform="translate(940 608)" fill="#d1d1d1"/>
+            <rect id="Rectangle_2802" data-name="Rectangle 2802" width="140" height="12" rx="2" transform="translate(940 632)" fill="#d1d1d1"/>
+        </g>
+        <g id="Group_3088" data-name="Group 3088">
+            <rect id="Rectangle_2797" data-name="Rectangle 2797" width="100" height="108" rx="4" transform="translate(820 536)" fill="#e6e6e6"/>
+            <path id="Icon_open-person" data-name="Icon open-person" d="M42,0C30.45,0,21,11.76,21,26.25S30.45,52.5,42,52.5,63,40.74,63,26.25,53.55,0,42,0ZM20.055,52.5A21.021,21.021,0,0,0,0,73.5V84H84V73.5a20.948,20.948,0,0,0-20.055-21C58.275,58.9,50.5,63,42,63S25.725,58.9,20.055,52.5Z" transform="translate(828 560)" fill="aqua"/>
+        </g>
+    </g>
+</svg>

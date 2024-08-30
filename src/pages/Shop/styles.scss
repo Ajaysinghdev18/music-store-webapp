@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.song-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 100px;
+  @include breakpoint($sm) {
+    margin-top: 10px;
+  }
+  .overview-section {
+    display: flex;
+    width: 80%;
+    margin-top: 5%;
+    justify-content: space-between;
+    @include breakpoint($xxl) {
+      width: 90%;
+    }
+  }
+
+}

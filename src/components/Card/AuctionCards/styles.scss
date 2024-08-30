@@ -1,0 +1,35 @@
+
+.card-auction-description-container {
+    .tag-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .place-bid-container {
+        width: 100%;
+        display: flex;
+        padding: 30px;
+        margin-top: 30px;
+        justify-content: space-between;
+        height: fit-content;
+        flex-shrink: 0;
+        border-radius: 24px;
+        background: linear-gradient(141deg, rgba(255, 255, 255, 0.00) 15.47%, rgba(255, 255, 255, 0.45) 135.88%);
+        box-shadow: 0px 3.522px 43.14px 0px rgba(0, 7, 72, 0.12);
+        backdrop-filter: blur(24.75px);
+    }
+}
+
+.bid-now-parallelogram {
+    backdrop-filter: blur(14px);
+    transform: skew(-20deg);
+    padding: 3%;
+    z-index: 2;
+    border: 1.24px solid;
+    border-radius: 8px;
+    background: linear-gradient(155.14deg, rgba(255, 255, 255, 0) -2.13%, rgba(255, 255, 255, 0.15) 136.58%),
+        linear-gradient(151.65deg, rgba(255, 255, 255, 0.3) -6.81%, rgba(255, 255, 255, 0) 106.92%);
+    box-shadow: 0px 3.3066704273223877px 40.5067138671875px 0px #0007481F;
+    border-image-source: linear-gradient(151.65deg, rgba(255, 255, 255, 0.3) -6.81%, rgba(255, 255, 255, 0) 106.92%);
+}

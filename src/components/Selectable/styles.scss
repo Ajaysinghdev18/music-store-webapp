@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+
+.d-selectable-wrapper {
+  .d-selectable {
+    backdrop-filter: blur(30px);
+    padding: 10px 30px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    &.d-selectable--selected {
+      border-color: $lime;
+
+      .selectable-name {
+        color: $lime;
+      }
+
+      .selectable-value {
+        color: $lime;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.d-ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  text-decoration: none;
+
+  &.underline {
+    border-bottom: 1px solid $white;
+  }
+
+  img {
+    margin-right: 24px;
+  }
+
+  &:hover {
+    span {
+      color: $cyan;
+    }
+  }
+}

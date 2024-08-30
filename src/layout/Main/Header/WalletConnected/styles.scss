@@ -1,0 +1,10 @@
+@import '../../../../styles//mixins';
+@import '../../../../styles/variables';
+
+.walletConnected-container {
+  font-family: $font-family1;
+  p {
+    font-family: $font-family1;
+    font-size: 16px;
+  }
+}

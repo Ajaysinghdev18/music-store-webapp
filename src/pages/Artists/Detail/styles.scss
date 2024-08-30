@@ -1,0 +1,108 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+:root {
+  --grid-columns: 3; // Default number of columns
+}
+
+@include breakpoint($xxxxxxl) {
+  :root {
+  --grid-columns: 5;
+  }
+}
+
+@include breakpoint($xxxxxl) {
+  :root {
+  --grid-columns: 5;
+  }
+}
+
+@include breakpoint($xxxxl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($xxl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($xl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($lg) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($sm) {
+  :root {
+  --grid-columns: 1;
+  }
+}
+
+.artist-detail-page {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .artist-hero-container{
+    display: flex;
+    width: 80%;
+    margin-top: 10%;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint($sm){
+      flex-direction: column-reverse;
+    }
+    @include breakpoint($lg){
+      margin-top: 20%;
+    }
+    .left-container{
+      width: 45%;
+    
+      @include breakpoint($sm){
+        width: 100%;
+        margin-bottom: 10%;
+      }
+    }
+    .right-container{
+      width: 35%;
+      height: fit-content;
+      @include breakpoint($xl){
+        width: 50%;
+      }
+      @include breakpoint($sm){
+        width: 100%;
+      }
+    }
+  }
+  .tab-button-container{
+    margin-top: 5%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .tab-content-container{
+    display: flex;
+    width: 80%;
+    margin-top: 4%;
+    .galleries {
+      display: grid;
+      grid-template-columns: repeat(var(--grid-columns), 1fr);
+      justify-content: center;
+      grid-gap: 15px;
+      width: 100%;
+    }
+  }
+
+}

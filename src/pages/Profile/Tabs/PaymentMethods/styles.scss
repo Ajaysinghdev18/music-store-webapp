@@ -1,0 +1,478 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.payment-methods-tab {
+  .tab-content {
+    width: 100%;
+
+    .methods {
+      padding: 2.7rem 6.125rem 0 5rem;
+      display: flex;
+      justify-content: space-between;
+
+      @include breakpoint($xxl) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      @include breakpoint($lg) {
+        padding: 2.5rem 30px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @include breakpoint($sm) {
+        padding: 29px 20px;
+      }
+
+      .card {
+        max-width: 530px;
+        width: 100%;
+
+        @include breakpoint($lg) {
+          max-width: 100%;
+
+          .link {
+            margin-bottom: 3px;
+          }
+        }
+
+        &:first-of-type {
+          @include breakpoint($lg) {
+            margin-bottom: 88px;
+          }
+        }
+
+        & + .card {
+          margin-left: 40px;
+
+          @include breakpoint($lg) {
+            margin-left: 0;
+          }
+        }
+
+        &:first-of-type > div {
+          &:last-of-type {
+            margin-top: 80px;
+
+            @include breakpoint($sm) {
+              margin-top: 50px;
+            }
+          }
+        }
+
+        .text-heading4 {
+          @include breakpoint($lg) {
+            border-bottom: 1px solid $white;
+            padding-bottom: 10px;
+          }
+
+          @include breakpoint($sm) {
+            padding-bottom: 5px;
+          }
+        }
+
+        .card-detect {
+          height: 38px;
+          backdrop-filter: blur(30px);
+          display: flex;
+          align-items: center;
+          padding-left: 10px;
+          margin: 30px 0;
+
+          &.detected {
+            svg {
+              color: $lime;
+            }
+
+            span {
+              color: $lime;
+            }
+          }
+
+          @include breakpoint($lg) {
+            background-color: $black;
+            margin: 40px 80px 20px;
+            padding-left: 20px;
+            height: 34px;
+          }
+
+          @include breakpoint($sm) {
+            margin: 29px 25px 20px;
+          }
+
+          & + div {
+            @include breakpoint($lg) {
+              margin: 0 80px;
+            }
+
+            @include breakpoint($sm) {
+              margin: 0 25px;
+            }
+          }
+
+          svg {
+            margin-right: 50px;
+
+            @include breakpoint($lg) {
+              margin-right: 15px;
+              height: 15px;
+              width: auto;
+            }
+          }
+        }
+
+        .marketplace-credit {
+          position: relative;
+          padding: 1.875rem 4rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 30px 0;
+
+          @include breakpoint($lg) {
+            margin: 30px 80px;
+            background-color: $black;
+            padding: 40px 35px;
+          }
+
+          @include breakpoint($sm) {
+            margin: 30px 25px 20px;
+            padding: 30px 35px;
+          }
+
+          & + div {
+            @include breakpoint($lg) {
+              margin: 0 80px;
+            }
+
+            @include breakpoint($sm) {
+              margin: 0 25px;
+            }
+          }
+
+          .text-body1 {
+            @include breakpoint($sm) {
+              font-size: 15px;
+              line-height: 20px;
+            }
+          }
+
+          hr {
+            background-color: white;
+            border: none;
+            height: 1px;
+            width: 100%;
+            margin: 20px 0;
+          }
+
+          svg {
+            position: absolute;
+            right: 1.25rem;
+            bottom: 1.5rem;
+
+            @include breakpoint($lg) {
+              bottom: 30px;
+              right: 20px;
+            }
+          }
+        }
+
+        .perfect-scrollbar {
+          max-height: 620px;
+          position: relative;
+
+          .ps__rail-y {
+            opacity: 1;
+          }
+
+          .prepaid-crypto-balance {
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+            position: relative;
+
+            @include breakpoint($lg) {
+              max-height: unset;
+              padding: 30px 20px 0;
+            }
+
+            > div {
+              width: 100%;
+              padding: 1.875rem 1.875rem 1.25rem;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              backdrop-filter: blur(30px);
+
+              & + div {
+                margin-top: 1.875rem;
+
+                @include breakpoint($lg) {
+                  margin-top: 20px;
+                }
+
+                @include breakpoint($sm) {
+                  margin-top: 10px;
+                }
+              }
+
+              @include breakpoint($lg) {
+                background-color: $black;
+                padding: 30px;
+              }
+
+              @include breakpoint($sm) {
+                padding: 20px;
+              }
+
+              .text-body1 {
+                margin: 10px 0;
+
+                @include breakpoint($sm) {
+                  font-size: 15px;
+                  line-height: 20px;
+                  margin: 5px 0;
+                }
+              }
+
+              .d-button {
+                margin-top: 20px;
+
+                @include breakpoint($sm) {
+                  margin-top: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .balance-setup {
+      .setup-content {
+        padding: 23.5px 60px 40px 82.5px;
+        @include breakpoint($md) {
+          padding: 0px;
+        }
+        .balance-heading {
+          @include breakpoint($md) {
+            text-align: center;
+            margin-top: 15px;
+          }
+        }
+        .balance-content {
+          margin-top: 30px;
+          display: grid;
+          grid-gap: 50px;
+          grid-template-columns: repeat(3, 1fr);
+          @include breakpoint($sm) {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+          }
+          .balance-card {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            backdrop-filter: blur(30px);
+            grid-column: span 2;
+            @include breakpoint($sm) {
+              width: 80%;
+              padding: 0px;
+            }
+            .d-icon {
+              margin: 35px 0;
+              @include breakpoint($sm) {
+                margin: 10px 0;
+              }
+            }
+          }
+
+          .setup-action {
+            display: flex;
+            flex-direction: column;
+            @include breakpoint($sm) {
+              width: 90%;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            }
+            .setup-action-button {
+              min-width: 45% !important;
+            }
+            .d-outlined-button {
+              margin-top: 30px;
+              @include breakpoint($sm) {
+                margin-top: 0px;
+              }
+            }
+          }
+        }
+      }
+
+      .d-table-container {
+        //padding: 0 60px 0 44px;
+
+        .d-table-divider {
+          width: calc(100% + 24px + 60px + 44px);
+          margin-left: -24px - 44px;
+        }
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: lime;
+  }
+
+  .backdrop-blur {
+    backdrop-filter: blur(30px);
+  }
+
+  .modal-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(30px);
+    z-index: 2;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal-background {
+      display: flex;
+      background: black;
+
+      .modal-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+
+        .icon-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          border-radius: 100px;
+          border: 1px solid lime;
+
+          @include breakpoint($sm) {
+            width: 74px;
+            height: 74px;
+          }
+
+          .d-icon {
+            height: 70px;
+            width: auto;
+
+            @include breakpoint($sm) {
+              height: 57px;
+            }
+          }
+        }
+
+        .descriptions {
+          list-style-type: disc;
+          color: $white;
+          width: 80%;
+          align-self: center;
+
+          @include breakpoint($sm) {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .bottom {
+      margin-bottom: 20px;
+    }
+    .modal {
+      border: 1px solid $lime;
+      max-width: 772px;
+      width: 100%;
+      padding: 50px;
+      position: relative;
+      margin: 0 45px;
+
+      @include breakpoint($sm) {
+        padding: 40px 15px 30px;
+      }
+
+      .d-icon-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+
+        .d-icon {
+          color: $lime;
+
+          @include breakpoint($sm) {
+            height: 18px;
+            width: 18px;
+          }
+        }
+      }
+
+      .modal-title {
+        margin-bottom: 40px;
+
+        @include breakpoint($sm) {
+          margin-bottom: 25px;
+        }
+      }
+
+      .label {
+        margin-bottom: 20px;
+      }
+
+      .form-control-group {
+        &:nth-of-type(2) {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
+      }
+
+      .card-input {
+        position: relative;
+
+        .card-input-placeholder {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: absolute;
+          opacity: 0.8;
+
+          .card-input-label {
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+
+            .d-icon {
+              color: $white;
+              margin-right: 10px;
+            }
+          }
+
+          .card-input-format {
+            padding-right: 10px;
+          }
+        }
+      }
+
+      .form-action {
+        display: flex;
+        justify-content: end;
+      }
+    }
+  }
+}

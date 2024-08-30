@@ -1,0 +1,416 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/variables';
+
+.profile-dashboard-tab {
+  display: flex;
+  padding: 44px 0;
+  position: relative;
+  justify-content: center;
+  @include breakpoint($xxl) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @include breakpoint($lg) {
+    padding: 30px 20px;
+
+    .recent-messages {
+      margin-right: 0;
+      margin-bottom: 48px;
+      width: 100%;
+
+      .recent-message-title {
+        text-align: left;
+      }
+
+      .messages {
+        .message {
+          .message-time {
+            hr {
+              width: 20%;
+            }
+
+            p {
+              flex: 1;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+
+      hr {
+        width: 90%;
+        margin-left: 0;
+      }
+    }
+  }
+
+  @include breakpoint($sm) {
+    padding: 29px 20px;
+  }
+
+  .divider {
+    position: absolute;
+    height: 1px;
+    background-color: $white;
+    top: 101px;
+    left: 0px;
+    width: calc(100% + 24px);
+  
+    @include breakpoint($lg) {
+      display: none;
+    }
+  }
+
+  .my-orders-wrapper {
+    width: 50%;
+
+    .my-orders-title {
+      margin-bottom: 35px;
+      padding-left: 40px;
+      @include breakpoint($sm) {
+        margin-bottom: 0px;
+        padding-left: 0px;
+      }
+    }
+
+    .my-orders {
+      padding-top: 30px;
+      padding-left: 40px;
+      width: 80%;
+      @include breakpoint($sm) {
+        padding-left: 0px;
+        width: 100%;
+      }
+      .my-order {
+        @include breakpoint($xs) {
+          padding: 16px;
+        }
+        @include breakpoint($sm) {
+          padding: 16px;
+        }
+        @include breakpoint($xxs) {
+          padding: 16px;
+        }
+
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border: 1px solid $lime;
+        padding: 32px 30px 32px 41px;
+
+        & + .my-order {
+          margin-top: 30px;
+        }
+
+        .order-icon {
+          width: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 30px;
+
+          .d-icon {
+            color: $lime;
+          }
+        }
+
+        .order-count {
+          margin-left: auto;
+        }
+        @include breakpoint($sm) {
+          padding: 30px 30px 30px 30px;
+        }
+      }
+    }
+    @include breakpoint($sm) {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  .recent-messages {
+    width: 50%;
+    margin-right: 60px;
+
+    @include breakpoint($xxl) {
+      width: 80%;
+      margin-bottom: 50px;
+    }
+    @include breakpoint($sm) {
+      width: 100%;
+      margin-right: 0px;
+    }
+    .recent-message-title {
+      margin-bottom: 65px;
+
+      @include breakpoint($sm) {
+        margin-bottom: 5px;
+      }
+    }
+
+    .messages {
+      height: 465px;
+      position: relative;
+      padding-top: 24.5px;
+
+      @include breakpoint($xxl) {
+        //padding-right: 70px;
+      }
+
+      @include breakpoint($sm) {
+        height: 300px;
+        //padding: 8px 0;
+      }
+
+      .message {
+        & + .message {
+          margin-top: 24px;
+
+          @include breakpoint($sm) {
+            margin-top: 12px;
+          }
+        }
+
+        .message-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10px;
+
+          @include breakpoint($sm) {
+            margin-bottom: 6px;
+          }
+
+          .delete-icon {
+            margin-left: 24px;
+            min-width: 32px;
+            max-width: 32px;
+            cursor: pointer;
+            transition: all ease 0.3s;
+
+            &:hover {
+              color: #ff00ff;
+            }
+
+            @include breakpoint($md) {
+              min-width: 1.5rem;
+              max-width: 1.5rem;
+            }
+          }
+        }
+
+        .message-time {
+          display: flex;
+          align-items: end;
+          justify-content: end;
+          position: relative;
+
+          > hr {
+            position: absolute;
+            width: 100%;
+            border: none;
+            background-color: #ffffff;
+            height: 1px;
+            right: 25%;
+            margin: 0;
+          }
+
+          p {
+            @include breakpoint($lg) {
+              opacity: 50%;
+            }
+
+            @include breakpoint($sm) {
+              font-size: 8px;
+              line-height: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .orders-wrapper {
+    width: 90%;
+    //padding: 0 40px;
+
+    @include breakpoint($sm) {
+      width: 100%;
+    }
+    .orders-tab {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 65px;
+
+      .order-tab {
+        cursor: pointer;
+
+        &.active {
+          .order-status {
+            color: $lime;
+          }
+
+          .order-count {
+            border-color: $lime;
+            background-color: $lime;
+            color: $black;
+          }
+        }
+
+        .order-status {
+          font-weight: bold;
+          margin-right: 10px;
+        }
+
+        .order-count {
+          font-weight: bold;
+          border: 1px solid $white;
+          width: 30px;
+          height: 30px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .orders {
+      height: 700px;
+      position: relative;
+
+      .order {
+        border: 1px solid $lime;
+        display: flex;
+        align-items: center;
+        color: $white;
+        flex-direction: row;
+        justify-content: space-evenly;
+        & + .order {
+          margin-bottom: 20px;
+          margin-top: 20px;
+          padding-top: 12px;
+          padding-bottom: 12px;
+        }
+
+        .order-delete {
+          width: 10%;
+          display: flex;
+          justify-content: center;
+        }
+
+        .order-total-price {
+          width: 10%;
+          display: flex;
+          justify-content: center;
+        }
+
+        .order-code {
+          width: 25%;
+
+          span:first-of-type {
+            color: darken($white, 50%);
+            margin-right: 10px;
+          }
+          @include breakpoint($sm) {
+            display: flex;
+            width: 20%;
+            margin-right: 0px;
+            flex-direction: column;
+          }
+        }
+
+        .order-date {
+          width: 15%;
+          display: flex;
+          align-items: center;
+        }
+
+        .order-items {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+
+            & + img {
+              margin-left: 10px;
+            }
+          }
+
+          span {
+            margin-left: 20px;
+            color: darken($white, 50%);
+          }
+          @include breakpoint($sm) {
+            flex-direction: column;
+          }
+        }
+
+        .order-next {
+          width: 5%;
+          text-align: right;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .no-orders {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        img {
+          height: 100%;
+          @include breakpoint($sm) {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  //.analytic-chart-area {
+  //  width: 60%;
+  //  height: 100%;
+  //  display: flex;
+  //  align-items: center;
+  //  justify-content: center;
+  //  min-height: 300px;
+  //
+  //  @include breakpoint($xxl) {
+  //    width: 96%;
+  //  }
+  //}
+}
+
+.order-detail-modal-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(30px);
+  z-index: 5;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .order-detail-modal {
+    border: 1px solid $lime;
+    max-width: 772px;
+    width: 100%;
+    padding: 50px;
+    position: relative;
+    background-color: $black;
+    margin: 0 45px;
+  }
+}

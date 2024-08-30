@@ -1,0 +1,60 @@
+
+.container{
+	margin: 4% auto;
+	width: 300px;
+	/* height: 140px; */
+	top:45%;
+	right: 30%;
+	position: relative;
+  	transform: translate(0) rotate(-25deg);
+	perspective: 1000px;
+}
+#carousel{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	animation: rotation 20s infinite linear;
+}
+#carousel:hover{
+	animation-play-state: paused;
+}
+#carousel figure{
+	display: block;
+	position: absolute;
+	width: 186px;
+	left: 10px;
+	top: 10px;
+	height: 180px;
+	background: black;
+	overflow: hidden;
+	border: solid 5px black;
+}
+$figure-count: 10; 
+$translateZ: 288px;
+
+#carousel figure {
+  @for $i from 1 through $figure-count {
+    &:nth-child(#{$i}) {
+      transform: rotateY(calc(($i - 1) * 360deg / $figure-count)) translateZ($translateZ);
+    }
+  }
+}
+img{
+	-webkit-filter: grayscale(0);
+	cursor: pointer;
+	transition: all .5s ease;
+}
+img:hover{
+	-webkit-filter: grayscale(0);
+  transform: scale(1.2,1.2);
+}
+
+@keyframes rotation{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg) ;
+	}
+}

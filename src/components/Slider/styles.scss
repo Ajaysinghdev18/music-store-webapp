@@ -1,0 +1,75 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.d-slider {
+  height: 1px;
+  border: none;
+  box-shadow: none;
+  width: 90%;
+
+  @include breakpoint($sm) {
+    width: 100%;
+  }
+
+  .noUi-handle {
+    width: 24px;
+    height: 24px;
+    top: -12px;
+    right: -12px;
+    border-radius: 50%;
+    border-width: 3px;
+    background-color: white;
+    box-shadow: none !important;
+    outline: none;
+
+    @include breakpoint($sm) {
+      width: 10px;
+      height: 10px;
+      border-width: 2px;
+      top: -5px;
+      right: -5px;
+    }
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  .noUi-tooltip {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: $font-family1;
+    padding: 0;
+    margin-bottom: 8px;
+
+    @include breakpoint($sm) {
+      font-size: 10px;
+      line-height: 14px;
+      margin-bottom: 0;
+    }
+  }
+
+  .noUi-connects {
+    overflow: visible;
+
+    .noUi-connect {
+      height: 3px;
+      background: white;
+      top: -1px;
+
+      @include breakpoint($sm) {
+        top: -0.75px;
+        height: 2px;
+      }
+    }
+  }
+
+  .noUi-touch-area {
+    cursor: pointer;
+    opacity: 0;
+  }
+}

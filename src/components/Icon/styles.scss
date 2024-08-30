@@ -1,0 +1,20 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.d-icon {
+  color: white;
+  height: auto;
+  transition: 0.5s;
+
+  @include breakpoint($md) {
+    width: 20px;
+  }
+
+  @include breakpoint($sm) {
+    width: 15px;
+  }
+
+  &:hover {
+    color: $magenta;
+  }
+}

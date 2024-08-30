@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="69" height="69" viewBox="0 0 69 69">
+    <g transform="translate(176.448 -1038.552)">
+        <g transform="translate(-176.448 1038.552)" stroke="currentColor" stroke-width="1">
+            <circle cx="34.5" cy="34.5" r="34" fill="none"/>
+        </g>
+        <path d="M14.5,0,29,26H0Z" transform="translate(-125.448 1059.552) rotate(90)" fill="currentColor"/>
+    </g>
+</svg>

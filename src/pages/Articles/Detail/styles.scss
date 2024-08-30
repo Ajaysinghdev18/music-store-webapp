@@ -1,0 +1,42 @@
+.article-detail-page {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  width: 100%;
+  .section {
+    backdrop-filter: blur(30px);
+    margin-top: 10%;
+    margin-bottom: 5%;
+    &.article-slider{
+      width: 80%;
+      align-self: center;
+    }
+    &.detail-section {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      align-self: center;
+
+      img {
+        max-height: 485px;
+      }
+    }
+  }
+
+  .mt-20 {
+    margin-top: 5%;
+  }
+  .mt-15 {
+    margin-top: 3%;
+  }
+  .mt-10 {
+    margin-top: 3%;
+  }
+  .mt-5 {
+    margin-top: 3%;
+  }
+
+  .divider {
+    width: 100%;
+  }
+}

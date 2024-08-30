@@ -1,0 +1,30 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/mixins';
+
+.group {
+  width: 35%;
+  padding-top: 24px;
+  padding-left: 64px;
+  .tags{
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    text-decoration: none;
+    &.underline {
+      border-bottom: 1px solid $white;
+    }
+    img {
+      margin-right: 24px;
+    }
+  }
+  button {
+    background-color: #400040;
+    color: $white;
+    text-align: center;
+    padding:12px 24px;
+    font-size: 25px;
+    margin-right: 16px ;
+    margin-bottom: 24px;
+  }
+}

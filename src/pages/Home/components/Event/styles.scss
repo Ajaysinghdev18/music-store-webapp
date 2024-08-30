@@ -1,0 +1,138 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.featured-event {
+  position: relative;
+  margin-bottom: 50px;
+  backdrop-filter: blur(30px);
+  padding: 52px 0 60px 211px;
+
+  @include breakpoint($xxl) {
+    padding-left: 100px;
+  }
+
+  @include breakpoint($xl) {
+    padding-left: 0;
+  }
+
+  @include breakpoint($lg) {
+    padding: 18px 0;
+  }
+
+  @include breakpoint($md) {
+    padding: 15px 0;
+  }
+
+  @include breakpoint($sm) {
+    padding: 13px 0;
+    margin-bottom: 100px;
+  }
+
+  .featured-event-header {
+    display: flex;
+    align-items: end;
+    position: relative;
+
+    @include breakpoint($xxl) {
+    }
+
+    @include breakpoint($xl) {
+      padding-left: 40px;
+    }
+
+    @include breakpoint($sm) {
+      padding-left: 20px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  hr {
+    margin: 18.5px 0;
+    z-index: -1;
+
+    @include breakpoint($xxl) {
+      margin: 8px 0;
+    }
+
+    @include breakpoint($sm) {
+      margin: 1px 0;
+    }
+  }
+
+  .featured-event-body {
+    position: relative;
+
+    @include breakpoint($xxl) {
+    }
+
+    @include breakpoint($xl) {
+      padding-left: 40px;
+    }
+
+    @include breakpoint($sm) {
+      padding-left: 20px;
+    }
+
+    .d-cart-button {
+      margin-top: 52px;
+
+      @include breakpoint($xl) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .featured-event-image {
+    position: absolute;
+    right: 43px;
+    width: 50%;
+    top: 25%;
+    .image-content{
+      background: transparent;
+      width: 65%;
+      position: absolute;
+      justify-content: space-between;
+      display: flex;
+      height: 100%;
+      .image-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 15%;
+        margin-bottom: 2%;
+        @include breakpoint($sm){
+          .text-heading2{
+            font-size: 12px !important;
+          }
+          .text-body1{
+            display: none;
+          }
+        }
+      }
+      .image-location{
+        overflow: hidden;
+        writing-mode: vertical-lr;
+        text-orientation: revert;
+        display: flex;
+        font-family: $font-family1;
+        font-size: 25px;
+        justify-content: center;
+        @include breakpoint($lg){
+          font-size: 8px !important;
+        }
+        @include breakpoint($xxxl){
+          font-size: 12px !important;
+        }
+        @include breakpoint($sm){
+          display: none;
+        }
+      }
+    }
+    @include breakpoint($sm) {
+      width: 40%;
+    }
+  }
+}

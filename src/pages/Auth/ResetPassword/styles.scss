@@ -1,0 +1,73 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+.reset-password-page {
+  min-height: calc(30vh - #{$header-h});
+  display: flex;
+  flex-direction: column;
+  background-image: url('/images/v-hand.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  justify-content: space-around;
+  @include breakpoint($xxxl) {
+    min-height: calc(100vh - #{$header-h});
+  }
+  @include breakpoint($lg) {
+    background-image: none;
+  }
+
+  @include breakpoint($sm) {
+    min-height: unset;
+    padding-bottom: 10%;
+  }
+
+  .content {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    backdrop-filter: blur(30px);
+    width: 30%;
+    align-self: center;
+    display: flex;
+
+    @include breakpoint($md) {
+      flex-direction: column-reverse;
+    }
+
+    .form {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      align-self: center;
+
+      .form-content {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        align-self: center;
+        align-items: center;
+
+        .confirm-password-wrapper {
+          position: relative;
+          display: flex;
+          align-items: center;
+
+          .toggle-visible-button {
+            right: 0;
+            position: absolute;
+          }
+        }
+      }
+
+      a {
+        text-decoration: none;
+        margin-top: 2%;
+
+        @include breakpoint($sm) {
+          margin-top: 3%;
+        }
+      }
+    }
+  }
+}

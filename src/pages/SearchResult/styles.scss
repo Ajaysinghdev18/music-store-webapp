@@ -1,0 +1,221 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+:root {
+  --grid-columns: 3; // Default number of columns
+}
+
+@include breakpoint($xxxxxxl) {
+  :root {
+  --grid-columns: 6;
+  }
+}
+
+@include breakpoint($xxxxxl) {
+  :root {
+  --grid-columns: 5;
+  }
+}
+
+@include breakpoint($xxxxl) {
+  :root {
+  --grid-columns: 4;
+  }
+}
+
+@include breakpoint($xxl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($xl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($lg) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($sm) {
+  :root {
+  --grid-columns: 2;
+  }
+}
+
+.search-result-page {
+  .search-panel {
+    position: absolute;
+    top: 327px;
+    left: 20px;
+    box-sizing: border-box;
+    width: 485.5px;
+    padding: 40px 40px 20px;
+    backdrop-filter: blur(30px);
+    z-index: 1;
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 31px;
+
+      .search-input {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin-right: 53.5px;
+
+        input {
+          flex: 1;
+          background-color: transparent;
+          border-top: none;
+          border-right: none;
+          border-left: none;
+          border-bottom: 1px solid $white;
+          border-radius: 0;
+          color: $white;
+          font-size: 20px;
+          line-height: 27px;
+          padding: 0;
+          height: 33px;
+          font-family: $font-family1;
+
+          &:hover {
+          }
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+
+        svg {
+          color: $lime;
+        }
+      }
+
+      .result-count {
+        color: $lime;
+      }
+    }
+
+    hr {
+      width: calc(100% + 80px);
+      margin-left: -40px;
+    }
+
+    .filters {
+      padding-top: 24px;
+
+      .filter-by-topic {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $white;
+
+        .topic-item {
+          cursor: pointer;
+        }
+
+        .active {
+          color: $lime;
+        }
+      }
+
+      .categories {
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        grid: auto / auto auto;
+        margin-bottom: 20px;
+
+        & > div {
+          margin-bottom: 10px;
+        }
+      }
+
+      .more-button {
+        border: none;
+        background-color: transparent;
+        color: $white;
+        text-decoration: underline;
+        width: 92px !important;
+        height: 22px !important;
+        cursor: pointer;
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        &:hover {
+          color: darken($white, 10%);
+        }
+
+        &:active {
+          color: darken($white, 20%);
+          transition-duration: 300ms;
+          transition-property: color;
+        }
+
+        @include breakpoint($md) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    @include breakpoint($xxl) {
+      top: 314px;
+    }
+
+    @include breakpoint($xl) {
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 100%;
+
+      hr {
+        width: calc(100% + 79px);
+        margin-left: -40px;
+      }
+
+      .filters {
+        .categories {
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    margin-left: 505px;
+    min-height: 500px;
+
+    .actions {
+      display: flex;
+      align-items: center;
+      padding: 25px 20px;
+      justify-content: space-between;
+    }
+
+    hr {
+      width: 100vw;
+      position: absolute;
+      right: 0;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(var(--grid-columns), 1fr);
+      justify-content: center;
+    }
+
+    @include breakpoint($xl) {
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.modal-overlay {
+    background-color: transparent !important;
+    backdrop-filter: blur(5px);
+}
+
+.modal-container {
+    background: linear-gradient(155.14deg, rgba(255, 255, 255, 0) -2.13%, rgba(255, 255, 255, 0.15) 136.58%);
+    padding: 2rem !important;
+    padding-top: 0rem !important;
+    border: 1px solid;
+    border-color: linear-gradient(168.82deg, #FB37FF 1.7%, rgba(155, 111, 238, 0) 27.12%, rgba(123, 127, 234, 0) 61.28%, #1BB2DE 99.52%);
+    border-image-source: linear-gradient(168.82deg, #FB37FF 1.7%, rgba(155, 111, 238, 0) 27.12%, rgba(123, 127, 234, 0) 61.28%, #1BB2DE 99.52%);
+    ;
+
+    .image-container {
+        height: 50%;
+        width: 100%;
+
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .description-container {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        justify-content: space-between;
+        background: linear-gradient(169.44deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%),
+            linear-gradient(155.14deg, rgba(255, 255, 255, 0) -2.13%, rgba(255, 255, 255, 0.15) 136.58%);
+        padding: 20px;
+
+        .bid-input {
+            border: 1px solid;
+            height: 40px;
+            border-image-source: linear-gradient(92.45deg, #06DBAC 33.31%, #BD00FF 140.74%);
+        }
+    }
+}
+
+.transaction-body {
+    background: linear-gradient(169.44deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%),
+        linear-gradient(155.14deg, rgba(255, 255, 255, 0) -2.13%, rgba(255, 255, 255, 0.15) 136.58%);
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+}

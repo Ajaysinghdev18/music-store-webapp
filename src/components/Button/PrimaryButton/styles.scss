@@ -1,0 +1,60 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 1.50rem !important;
+  color: $white;
+  font-weight: 600;
+  border-image-slice: 1;
+  width: 100%;
+  font-family: 'GemunuLibre';
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(130deg, #06DBAC, #BD00FF);
+  }
+}
+
+.button-primary {
+  cursor: pointer;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #06DBAC, #d53a9d);
+  background: linear-gradient(130deg, $cyan, $magenta);
+
+}
+
+.button-secondary {
+  background: white;
+  color: black;
+  border-width: 1px;
+  font-weight: 200 !important;
+  border-color: #fff !important;
+  border: 2px solid;
+  cursor: pointer;
+  border-image-slice: 1;
+  &:hover {
+    // border-image-source: linear-gradient(to right, #06DBAC, #d53a9d);
+    background: linear-gradient(130deg, #06DBAC, #BD00FF);
+  }
+}
+
+.button-basic {
+  border-color: white !important;
+  border: 2px solid;
+  background: transparent !important;
+  color: white;
+  font-weight: 200 !important;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-image-slice: 1;
+
+  &:hover {
+    border: none !important;
+    background: linear-gradient(130deg, #06DBAC, #BD00FF) !important;
+  }
+}

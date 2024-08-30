@@ -1,0 +1,154 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.d-step {
+  position: relative;
+  flex: 1 1 0;
+  z-index: 3;
+
+  &.completed {
+    .d-step-content {
+      .d-step-icon {
+        cursor: pointer;
+        border: 2px solid #00ffff;
+      }
+    }
+
+    .d-step-connector {
+      height: 3px;
+      bottom: 12px;
+      background-color: #00ff00;
+    }
+
+    &.format {
+      .d-step-connector{
+        background-color: #00ffff;
+      }
+    }
+  }
+
+  &.active {
+    .d-step-content {
+      .d-step-icon {
+        cursor: initial;
+      }
+    }
+
+    .d-step-connector {
+      height: 3px;
+      bottom: 12px;
+      background-color: #00ff00;
+    }
+
+    &.format {
+      .d-step-connector {
+        background-color: #00ffff;
+      }
+    }
+  }
+
+  &.format {
+    .d-step-content {
+      .d-step-icon {
+        svg {
+          color: #00ffff;
+        }
+      }
+    }
+  }
+
+  .d-step-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .d-step-label {
+      margin-bottom: 14px;
+    }
+
+    .d-step-icon {
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid white;
+      border-radius: 50%;
+      background: black;
+      cursor: not-allowed;
+
+      span {
+        font-weight: 600;
+        color: white;
+      }
+
+      svg {
+        color: #00ff00;
+      }
+
+      svg {
+        color: #00ff00;
+      }
+
+      &.format svg {
+        color: #00ffff;
+      }
+
+      @include breakpoint($md) {
+        width: 20px;
+        height: 20px;
+
+        span {
+          font-size: 14px;
+        }
+      }
+
+      @include breakpoint($sm) {
+        width: 14px;
+        height: 14px;
+
+        span {
+          font-size: 10px;
+        }
+
+        svg {
+          width: 10px;
+        }
+      }
+    }
+  }
+
+  .d-step-connector {
+    position: absolute;
+    bottom: 13px;
+    left: calc(-50% + 14px);
+    right: calc(50% + 14px);
+    height: 1px;
+    background-color: white;
+
+    @include breakpoint($md) {
+      bottom: 10px !important;
+      left: calc(-50% + 10px);
+      right: calc(50% + 10px);
+    }
+
+    @include breakpoint($sm) {
+      bottom: 7px !important;
+      left: calc(-50% + 7px);
+      right: calc(50% + 7px);
+    }
+  }
+
+  &.start {
+    .d-step-connector {
+      left: calc(-3% + 14px);
+    }
+  }
+  &.end {
+    &.completed {
+      .d-step-connector {
+        right: calc(100% + 10px);
+      }
+    }
+  }
+}

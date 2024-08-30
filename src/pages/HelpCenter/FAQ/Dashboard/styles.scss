@@ -1,0 +1,9 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.faq-page {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 90px 120px;
+  padding: 90px 60px;
+}

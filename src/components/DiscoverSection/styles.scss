@@ -1,0 +1,154 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+:root {
+    --grid-columns: 3; // Default number of columns
+  }
+  
+  @include breakpoint($xxxxxxl) {
+    :root {
+    --grid-columns: 5;
+    }
+  }
+  
+  @include breakpoint($xxxxxl) {
+    :root {
+    --grid-columns: 5;
+    }
+  }
+  
+  @include breakpoint($xxxxl) {
+    :root {
+    --grid-columns: 3;
+    }
+  }
+  
+  @include breakpoint($xxl) {
+    :root {
+    --grid-columns: 3;
+    }
+  }
+  
+  @include breakpoint($xl) {
+    :root {
+    --grid-columns: 3;
+    }
+  }
+  
+  @include breakpoint($lg) {
+    :root {
+    --grid-columns: 2;
+    }
+  }
+  
+  @include breakpoint($sm) {
+    :root {
+    --grid-columns: 1;
+    }
+  }
+.discover-section-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .dicover-section-header-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        z-index: 100;
+
+        .filter-tab{
+            margin-top: auto;
+            top:80px;
+            position: absolute;
+            right: 0;
+            width: 30%;
+            padding: 2%;
+            z-index: 100;
+            backdrop-filter: blur(30px);
+            @include breakpoint($xxl){
+              width: 50%;
+            }
+            @include breakpoint($sm){
+              width: 100%;
+              top:60px;
+            }
+        }
+        .filter-section-container{
+            display: flex;
+       
+
+          
+        }
+        .dicover-section-header {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+            flex-direction: column;
+
+            .fileter-section {
+                width: 80%;
+                justify-content: space-between;
+                display: flex;
+                align-self: end;
+                .selected-category{
+                    background: linear-gradient(146deg, #06DBAC 0%, #BD00FF 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent; 
+                }
+                & p{
+                    cursor: pointer;
+                }
+            }
+            .filter-list{
+                width: 30%;
+                display: flex;
+                background: linear-gradient(143deg, #06DBAC 0%, #BD00FF 100%);
+                border-radius: 26px;
+                align-self: end;
+                padding: 20px;
+                justify-content: space-between;
+            }
+            .tags{
+                display: flex;
+                width: 100%;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            .category-section {
+                width: 100%;
+                justify-content: space-between;
+                display: flex;
+                padding: 4px;
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+                .css-nlndso{
+                    display: none;
+                }
+                & p{
+                    margin-right: 30px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+
+    .dicover-section-main {
+        width: 100%;
+        display: grid;
+        gap: 20px;
+        margin-top: 3%;
+        display: grid;
+        grid-template-columns: repeat(var(--grid-columns), 1fr);
+        @include breakpoint($sm){
+          margin-top: 30px;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36.9" height="41" viewBox="0 0 36.9 41">
+  <g id="Group_791" data-name="Group 791" transform="translate(-507.003 -859.999)">
+    <g id="Group_155" data-name="Group 155" transform="translate(520.203 884.358)">
+      <line id="Line_37" data-name="Line 37" x2="3.5" y2="3.5" transform="translate(0 3.5)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_38" data-name="Line 38" x1="7" y2="7" transform="translate(3.5)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"/>
+    </g>
+    <path id="bx-shopping-bag" d="M8.6,44H37.3a4.1,4.1,0,0,0,4.1-4.1V17.35a2.05,2.05,0,0,0-2.05-2.05H33.2V13.25a10.25,10.25,0,0,0-20.5,0V15.3H6.55A2.05,2.05,0,0,0,4.5,17.35V39.9A4.1,4.1,0,0,0,8.6,44Zm8.2-30.75a6.15,6.15,0,0,1,12.3,0V15.3H16.8ZM8.6,19.4h4.1v4.1h4.1V19.4H29.1v4.1h4.1V19.4h4.1l0,20.5H8.6Z" transform="translate(502.503 856.999)" fill="currentColor"/>
+  </g>
+</svg>

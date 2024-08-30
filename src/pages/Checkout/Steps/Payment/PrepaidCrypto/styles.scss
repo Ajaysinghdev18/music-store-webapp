@@ -1,0 +1,50 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/mixins';
+.prepaid-crypto {
+  display: flex;
+  align-items: center;
+  padding: 8px 35px 8px 15px;
+  border: 1px solid $lime;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  background-color: $black;
+
+  &.disabled {
+    cursor: not-allowed;
+
+    .icon-wrapper {
+      opacity: 0.5;
+    }
+
+    .crypto-label {
+      opacity: 0.5;
+    }
+  }
+
+  .icon-wrapper {
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    margin-right: 15px;
+
+    .d-icon {
+      height: 18px;
+      width: auto;
+    }
+  }
+
+  .crypto-label {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .end-icon {
+    position: absolute;
+    right: 15px;
+    color: $lime;
+  }
+}
+
+

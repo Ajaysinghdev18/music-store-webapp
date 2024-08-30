@@ -1,0 +1,464 @@
+//
+// Button Base
+//
+@mixin button-base {
+  border: none;
+  border-radius: 0 !important;
+  cursor: pointer;
+  position: relative;
+  font-family: $font-family1;
+  font-size: 25px !important;
+  line-height: 33px !important;
+  height: 53px !important;
+  min-width: 180px !important;
+  padding: 0 33px !important;
+
+  @include breakpoint($lg) {
+    min-width: 180px !important;
+    font-size: 24px !important;
+    line-height: 31px !important;
+    height: 42px !important;
+    padding: 0 22px !important;
+  }
+
+  @include breakpoint($md) {
+    min-width: 120px !important;
+    font-size: 18px !important;
+    line-height: 26px !important;
+    height: 32px !important;
+    padding: 0 16px !important;
+  }
+
+  @include breakpoint($sm) {
+    font-size: 14px !important;
+    line-height: 19px !important;
+    height: 29px !important;
+    min-width: 96px !important;
+    padding: 0 8px !important;
+  }
+
+  &.d-button--small {
+    height: 46px !important;
+    min-width: 70px !important;
+    padding: 0 16px !important;
+    font-size: 20px !important;
+    line-height: 22px !important;
+
+    @include breakpoint($sm) {
+      font-size: 14px !important;
+      line-height: 19px !important;
+      height: 30px !important;
+    }
+
+    svg {
+      left: 18px;
+    }
+  }
+
+  &.d-button--full-width {
+    min-width: 100% !important;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  svg {
+    position: absolute;
+    left: 22px;
+    width: 32px;
+    margin: unset;
+
+    @include breakpoint($lg) {
+      width: 26px;
+    }
+
+    @include breakpoint($md) {
+      width: 21px;
+    }
+
+    @include breakpoint($sm) {
+      width: 16px;
+    }
+  }
+}
+
+//
+// Input Base
+//
+@mixin input-base {
+  background-color: transparent !important;
+  color: $white;
+  border-radius: 0 !important;
+  font-family: $font-family1;
+  font-size: 17px !important;
+  line-height: 22px !important;
+  padding: 0 10px !important;
+  background-image: none;
+  border: 1px solid $lime !important;
+
+  @include breakpoint($sm) {
+    font-size: 14px !important;
+    line-height: 19px !important;
+    height: 24px !important;
+  }
+
+  &.d-form-input--cyan {
+    border-color: $cyan !important;
+  }
+
+  &:focus {
+    border-color: $lime !important;
+    box-shadow: none !important;
+
+    &.d-form-input--cyan {
+      border-color: $cyan !important;
+    }
+  }
+
+  &[aria-invalid='true'] {
+    border-color: $red !important;
+    box-shadow: none !important;
+
+    &:focus {
+      border-color: $red !important;
+    }
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-transition: 'color 9999s ease-out, background-color 9999s ease-out';
+    -webkit-transition-delay: 9999s;
+  }
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+//
+// Input Base
+//
+@mixin textarea-base {
+  background-color: transparent !important;
+  color: $white;
+  border-radius: 0 !important;
+  @include text-body1;
+  padding: 8px 10px !important;
+  background-image: none;
+  border: 1px solid $lime !important;
+
+  @include breakpoint($sm) {
+    font-size: 14px !important;
+    line-height: 19px !important;
+    height: 24px !important;
+  }
+
+  &.d-form-textarea--cyan {
+    border-color: $cyan !important;
+  }
+
+  &:focus {
+    border-color: $lime !important;
+    box-shadow: none !important;
+
+    &.d-form-textarea--cyan {
+      border-color: $cyan !important;
+    }
+  }
+
+  &[aria-invalid='true'] {
+    border-color: $red !important;
+    box-shadow: none !important;
+
+    &:focus {
+      border-color: $red !important;
+    }
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-transition: 'color 9999s ease-out, background-color 9999s ease-out';
+    -webkit-transition-delay: 9999s;
+  }
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+//
+// Breakpoint
+//
+@mixin breakpoint($max) {
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin breakpoint-up($min) {
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+//
+// Typography
+//
+@mixin text-heading1 {
+  font-family: $font-family2;
+  font-size: 80px !important;
+  font-weight: 400;
+  letter-spacing: 0;
+
+  @include breakpoint($xxl) {
+    font-size: 50px !important;
+
+  }
+
+  @include breakpoint($xl) {
+    font-size: 40px !important;
+
+  }
+
+  @include breakpoint($lg) {
+    font-size: 35px !important;
+  }
+
+  @include breakpoint($md) {
+    font-size: 30px !important;
+  }
+
+  @include breakpoint($sm) {
+    font-size: 25px !important;
+  }
+}
+
+@mixin text-heading2 {
+  font-family: $font-family2;
+  font-size: 46px !important;
+  font-weight: 400;
+  letter-spacing: 0;
+
+  @include breakpoint($xxl) {
+    font-size: 46px !important;
+  }
+
+  @include breakpoint($xl) {
+    font-size: 40px !important;
+  }
+
+  @include breakpoint($lg) {
+    font-size: 36px !important;
+  }
+
+  @include breakpoint($md) {
+    font-size: 26px !important;
+  }
+
+  @include breakpoint($sm) {
+    font-size: 24px !important;
+  }
+}
+
+@mixin text-heading3 {
+  font-family: $font-family1;
+  font-size: 35px !important;
+  font-weight: 400;
+  letter-spacing: 0;
+
+  @include breakpoint($xxl) {
+    font-size: 32px !important;
+
+  }
+
+  @include breakpoint($xl) {
+    font-size: 28px !important;
+  }
+
+  @include breakpoint($lg) {
+  }
+
+  @include breakpoint($md) {
+    font-size: 22px !important;
+  }
+
+  @include breakpoint($sm) {
+    font-size: 20px !important;
+  }
+}
+
+@mixin text-heading4 {
+  font-family: $font-family1;
+  font-size: 25px !important;
+  line-height: 33px !important;
+  font-weight: bold;
+  letter-spacing: 0;
+
+  @include breakpoint($xxl) {
+    font-size: 22px !important;
+    line-height: 29px !important;
+  }
+
+  @include breakpoint($xl) {
+    font-size: 20px !important;
+    line-height: 26px !important;
+  }
+
+  @include breakpoint($lg) {
+  }
+
+  @include breakpoint($md) {
+    font-size: 16px !important;
+    line-height: 22px !important;
+  }
+
+  @include breakpoint($sm) {
+    font-size: 14px !important;
+    line-height: 19px !important;
+  }
+}
+@mixin text-body {
+  font-family: $font-family1;
+  font-size: 24px !important;
+  line-height: 26px !important;
+  font-weight: normal;
+  letter-spacing: 0;
+
+  @include breakpoint($xxl) {
+    font-size: 22px !important;
+    line-height: 26px !important;
+  }
+
+  @include breakpoint($xl) {
+    font-size: 20px !important;
+    line-height: 24px !important;
+  }
+
+  @include breakpoint($lg) {
+  }
+
+  @include breakpoint($md) {
+    font-size: 18px !important;
+    line-height: 22px !important;
+  }
+
+  @include breakpoint($sm) {
+    font-size: 16px !important;
+    line-height: 19px !important;
+  }
+}
+@mixin text-body1 {
+  font-family: $font-family1;
+  font-size: 20px !important;
+  line-height: 26px !important;
+  font-weight: normal;
+  letter-spacing: 0;
+
+  @include breakpoint($xxl) {
+    font-size: 20px !important;
+    line-height: 26px !important;
+  }
+
+  @include breakpoint($xl) {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+
+  @include breakpoint($lg) {
+  }
+
+  @include breakpoint($md) {
+    font-size: 16px !important;
+    line-height: 22px !important;
+  }
+
+  @include breakpoint($sm) {
+    font-size: 14px !important;
+    line-height: 19px !important;
+  }
+}
+
+@mixin text-body2 {
+  font-family: $font-family1;
+  font-size: 18px !important;
+  line-height: 22px !important;
+  font-weight: 300;
+  letter-spacing: 0;
+
+  @include breakpoint($xxl) {
+    font-size: 20px !important;
+    line-height: 26px !important;
+  }
+
+  @include breakpoint($xl) {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+
+  @include breakpoint($lg) {
+  }
+
+  @include breakpoint($md) {
+    font-size: 12px !important;
+    line-height: 16px !important;
+  }
+
+  @include breakpoint($sm) {
+    font-size: 12px !important;
+    line-height: 16px !important;
+  }
+}
+
+@mixin text-body3 {
+  font-family: $font-family1;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  font-weight: normal;
+  letter-spacing: 0;
+
+  @include breakpoint($xxl) {
+    font-size: 20px !important;
+    line-height: 26px !important;
+  }
+
+  @include breakpoint($xl) {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+
+  @include breakpoint($lg) {
+  }
+
+  @include breakpoint($md) {
+  }
+
+  @include breakpoint($sm) {
+    font-size: 12px !important;
+    line-height: 16px !important;
+  }
+}
+
+// Random Class
+$colors: cyan, yellow, magenta, lime;
+@mixin random-gradient-class {
+  @each $color1 in $colors {
+    @each $color2 in $colors {
+      @if ($color2 != $color1) {
+        &.#{$color1 + ''}-#{$color2 + ''}::after {
+          background-image: linear-gradient(90deg, $color1, $color2);
+        }
+      }
+    }
+  }
+}

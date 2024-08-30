@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+.category-page{
+    display: flex;
+    justify-content: center;
+    .categories {
+        width: 80%;
+        align-self: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 16px;
+        backdrop-filter: blur(30px);
+        @include breakpoint($xl) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+    }  
+}

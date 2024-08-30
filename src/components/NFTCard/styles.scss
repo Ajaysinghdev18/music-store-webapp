@@ -1,0 +1,67 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.d-nft-card {
+  border: 1px solid;
+  width: 100%;
+  padding: 16px;
+
+  svg {
+    width: 20px;
+  }
+
+  .text--magenta {
+    color: #ff00ff !important;
+  }
+
+  .nft-image-container {
+    margin-top: 16px;
+    margin-bottom: 20px;
+    min-height: 300px;
+    .nft-image {
+      width: 100%;
+    }
+  }
+
+  .text-container {
+    margin-bottom: 16px;
+  }
+
+  .actions {
+    margin-top: 20px;
+    flex-direction: row;
+      @include breakpoint($xxxxxxl){
+        flex-direction: column;
+      }
+      @include breakpoint($xxxl) {
+        flex-direction: column;
+      }
+      
+    button {
+      min-width: unset !important;
+      padding-left: 60px !important;
+      @include breakpoint($xxxxxxl){
+        margin-top: 20px;
+      }
+      @include breakpoint($xxxl) {
+        margin-top: 20px;
+      }
+
+      svg {
+        width: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+
+  &.active {
+    border-color: $cyan;
+
+    .text-heading3 {
+      color: $cyan;
+    }
+  }
+}

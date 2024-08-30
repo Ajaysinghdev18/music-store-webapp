@@ -1,0 +1,256 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+
+:root {
+  --grid-columns: 3; // Default number of columns
+}
+
+@include breakpoint($xxxxxxl) {
+  :root {
+  --grid-columns: 5;
+  }
+}
+
+@include breakpoint($xxxxxl) {
+  :root {
+  --grid-columns: 5;
+  }
+}
+
+@include breakpoint($xxxxl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($xxl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($xl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($lg) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($sm) {
+  :root {
+  --grid-columns: 1;
+  }
+}
+// .artist-detail-page {
+//   .content {
+//     backdrop-filter: blur(30px);
+//     width: 80%;
+
+//     .products {
+//       display: grid;
+//       grid-template-columns: repeat(var(--grid-columns), 1fr);
+//       justify-content: center;
+//       grid-gap: 15px;;
+//     }
+//   }
+
+//   .banner-wrapper {
+//     position: relative;
+//     margin-bottom: 8px;
+//     width: 100%;
+//     height: 466px;
+//     border-radius: 27px;
+
+//     .banner-container {
+//       // border: 1px solid white;
+//       padding: 16px;
+
+//       .control-dots {
+//         display: none;
+//       }
+//     }
+
+//     img {
+//       width: 100%;
+//     }
+
+//     .artist-image-wrapper {
+//       position: absolute;
+//       width: 234px;
+//       height: 234px;
+//       border-radius: 100%;
+//       left: calc(50% - 117px);
+//       bottom: -117px;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       border: 1px solid white;
+//       overflow: hidden;
+//       background: black;
+
+//       .artist-image-container {
+//         background-size: cover;
+//         background-image: url('/images/artists/avatar.png');
+//         width: 100%;
+//         height: 100%;
+
+//         img {
+//           width: 100%;
+//           height: 100%;
+//           object-fit: cover;
+//         }
+//       }
+//     }
+//   }
+
+//   .artist-detail-container {
+//     padding: 22px;
+
+//     .artist-info {
+//       .artist-header-container {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+
+//         .icons-container {
+//           display: flex;
+//           align-items: center;
+
+//           svg {
+//             width: 20px;
+//             margin-right: 16px;
+//           }
+
+//           .bluetooth-icon-container {
+//             border-left: 1px solid rgba(255, 255, 255, 0.5);
+//             padding-left: 16px;
+
+//             svg {
+//               margin-right: 0;
+//               width: 20px;
+//               vertical-align: middle;
+//             }
+//           }
+
+//           .select {
+//             margin-left: 24px;
+//             border-color: white;
+//             width: 130px;
+
+//             .d-selected-option {
+//               padding: 10px;
+//               height: 32px;
+//             }
+
+//             svg {
+//               margin-right: 0;
+//               width: 6px;
+//               color: white;
+//             }
+//           }
+//         }
+//       }
+
+//       .artist-joined-at {
+//         opacity: 0.5;
+//         margin-bottom: 12px;
+//         font-family: $font-family1;
+//       }
+
+//       .artist-description {
+//         max-width: 42%;
+//       }
+//     }
+//   }
+
+//   .tabs-wrapper {
+//     .tabs {
+//       display: flex;
+//       border-top: 1px solid white;
+//       border-bottom: 1px solid white;
+
+//       button {
+//         flex-grow: 1;
+//         background: transparent;
+//         color: white;
+//         outline: none !important;
+//         box-shadow: none;
+//         font-family: $font-family1;
+
+//         &.active {
+//           color: #00FF00;
+//           border-bottom: 2px solid #00FF00;
+//         }
+//       }
+//     }
+
+//     .tab-panels {
+//       padding-top: 20px;
+
+//       .user-cards-container {
+//         display: grid;
+//         grid-template-columns: 1fr 1fr 1fr;
+//         grid-gap: 16px;
+
+//         @include breakpoint($xxl) {
+//           grid-template-columns: 1fr 1fr 1fr;
+//         }
+
+//         @include breakpoint($md) {
+//           grid-template-columns: 1fr 1fr;
+//         }
+
+//         @include breakpoint($sm) {
+//           grid-template-columns: 1fr;
+//         }
+
+//         .user-card {
+//           border: 1px solid white;
+//           color: white;
+
+//           img {
+//             width: 100%;
+//           }
+
+//           .user-card-content {
+//             padding-top: 20px;
+//             padding-bottom: 20px;
+
+//             h4 {
+//               margin-bottom: 8px;
+//             }
+
+//             a {
+//               text-decoration: none;
+//             }
+
+//             .user-card-price-container {
+//               margin-top: 28px;
+//               display: flex;
+//               align-items: center;
+//               justify-content: center;
+
+//               .add-cart-button {
+//                 margin-right: 20px;
+//                 background: #00FF00;
+//                 padding: 4px 12px;
+//                 font-weight: 600;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.gallery-detail-screen{
+  width: 100%;
+  margin-top: 10%;
+}

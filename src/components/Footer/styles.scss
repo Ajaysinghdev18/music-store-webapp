@@ -1,0 +1,138 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.d-footer {
+  position: relative;
+  min-height: 420px;
+  padding: 0 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(30px);
+
+  @include breakpoint($xl) {
+    min-height: unset;
+    padding: 60px 0 40px;
+    flex-direction: column-reverse;
+  }
+
+  @include breakpoint($sm) {
+    padding: 40px 0 20px;
+  }
+
+  & > div {
+    & + div {
+      @include breakpoint($xl) {
+        margin-bottom: 30px;
+      }
+
+      @include breakpoint($sm) {
+        margin-bottom: 22px;
+      }
+    }
+  }
+
+  .social-link-group {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($xl) {
+      flex-direction: row;
+      align-items: center;
+      max-width: 300px;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    @include breakpoint($sm) {
+      max-width: 150px;
+    }
+
+    .social-link {
+      cursor: pointer;
+      color: white;
+
+      & + .social-link {
+        margin-top: 43px;
+
+        @include breakpoint($xl) {
+          margin-top: 0;
+        }
+      }
+
+      svg {
+        transition: all ease 0.3s;
+
+        @include breakpoint($xl) {
+          width: 28px;
+        }
+
+        @include breakpoint($sm) {
+          width: 15px;
+        }
+      }
+
+      &:hover {
+        color: #ff00ff;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .inner-link-group {
+      display: flex;
+      padding: 42px 0;
+
+      & > a {
+        padding: 0 34.5px;
+        text-decoration: none;
+
+        & + a {
+          border-left: 1px solid $white;
+        }
+      }
+
+      @include breakpoint($sm) {
+        padding: 19px 0;
+
+        & > a {
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+
+  .casper {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    bottom: 30px;
+
+    @include breakpoint($xl) {
+      position: initial;
+      bottom: unset;
+    }
+
+    img {
+      height: 40px;
+      margin-left: 13px;
+      margin-top: 2px;
+
+      @include breakpoint($xl) {
+        height: 32px;
+      }
+
+      @include breakpoint($sm) {
+        height: 12px;
+        margin-left: 3px;
+      }
+    }
+  }
+}

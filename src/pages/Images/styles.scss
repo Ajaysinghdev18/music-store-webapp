@@ -1,0 +1,201 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+:root {
+  --grid-columns: 3; // Default number of columns
+}
+
+@include breakpoint($xxxxxxl) {
+  :root {
+  --grid-columns: 6;
+  }
+}
+
+@include breakpoint($xxxxxl) {
+  :root {
+  --grid-columns: 5;
+  }
+}
+
+@include breakpoint($xxxxl) {
+  :root {
+  --grid-columns: 4;
+  }
+}
+
+@include breakpoint($xxl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($xl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($lg) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($sm) {
+  :root {
+  --grid-columns: 2;
+  }
+}
+
+:root {
+  --grid-columns: 3; // Default number of columns
+}
+
+@include breakpoint($xxxxxxl) {
+  :root {
+  --grid-columns: 5;
+  }
+}
+
+@include breakpoint($xxxxxl) {
+  :root {
+  --grid-columns: 5;
+  }
+}
+
+@include breakpoint($xxxxl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($xxl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($xl) {
+  :root {
+  --grid-columns: 3;
+  }
+}
+
+@include breakpoint($lg) {
+  :root {
+  --grid-columns: 2;
+  }
+}
+
+@include breakpoint($sm) {
+  :root {
+  --grid-columns: 1;
+  }
+}
+.image-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 150px;
+
+  @include breakpoint($sm) {
+    margin-top: 50px;
+  }
+  .crypto-art-container {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-self: center;
+    margin-bottom: 10%;
+
+    @include breakpoint($sm) {
+      flex-direction: column-reverse;
+      margin-bottom: 0%;
+    }
+
+    .left-container {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      @include breakpoint($xl) {
+        width: 50%;
+      }
+      @include breakpoint($sm) {
+        width: 80%;
+      }
+
+      .auction-card {
+        height: 472px;
+        width: 85%;
+        @include breakpoint($xl) {
+          height: 360px;
+          width: 75%;
+        }
+        @include breakpoint($sm) {
+          width: 172px;
+        }
+      }
+    }
+
+    .right-container {
+      width: 55%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      @include breakpoint($xl) {
+        width: 45%;
+      }
+      @include breakpoint($sm) {
+        width: 100%;
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .toolbar-container {
+    display: flex;
+    justify-content: center;
+
+    .toolbar {
+      backdrop-filter: blur(30px);
+      display: flex;
+      align-items: baseline;
+      width: 80%;
+      align-self: center;
+      justify-content: space-between;
+      padding: 5% 0;
+
+      .actions {
+        width: 10%;
+        justify-content: space-between;
+        display: flex;
+
+        @include breakpoint($md) {
+          width: 15%;
+        }
+      }
+    }
+  }
+
+  .divider {
+    height: 1px;
+    background-color: $white;
+  }
+
+  .content {
+    backdrop-filter: blur(30px);
+    display: flex;
+    width: 80%;
+    align-self: center;
+    flex-direction: column;
+
+    .products-container {
+      display: grid;
+      grid-template-columns: repeat(var(--grid-columns), 1fr);
+      justify-content: center;
+    }
+  }
+}

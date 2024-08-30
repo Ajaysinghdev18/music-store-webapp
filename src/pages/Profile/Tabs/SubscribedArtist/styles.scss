@@ -1,0 +1,100 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/variables';
+
+:root {
+  --grid-columns: 2; // Default number of columns
+}
+
+@include breakpoint($xxxxxxl) {
+  :root {
+  --grid-columns: 5;
+  }
+}
+
+@include breakpoint($xxxxxl) {
+  :root {
+  --grid-columns: 5;
+  }
+}
+
+@include breakpoint($xxxxl) {
+  :root {
+  --grid-columns: 2;
+  }
+}
+
+@include breakpoint($xxl) {
+  :root {
+  --grid-columns: 2;
+  }
+}
+
+@include breakpoint($xl) {
+  :root {
+  --grid-columns: 2;
+  }
+}
+
+@include breakpoint($lg) {
+  :root {
+  --grid-columns: 2;
+  }
+}
+
+@include breakpoint($sm) {
+  :root {
+  --grid-columns: 1;
+  }
+}
+
+.liked-products-tab {
+  margin-top: 5%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: 10px;
+
+
+  .artist-card {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+
+    .artist-image-container {
+      width: 120px;
+      height: 120px;
+      margin: 24px;
+      border-radius: 100%;
+      background-image: url('/images/artists/avatar.png');
+      overflow: hidden;
+
+      img{
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .artist-name-container {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p{
+        font-family: "GemunuLibre"; 
+      }
+      .artist-name {
+        margin-bottom: 8px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+       
+
+        .star-check-icon {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}

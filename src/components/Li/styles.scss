@@ -1,0 +1,25 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.d-li {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 32px;
+
+  &.active {
+    span {
+      color: $magenta;
+    }
+  }
+
+  &:hover {
+    span {
+      color: $magenta;
+    }
+  }
+
+  img {
+    margin-right: 29.5px;
+  }
+}
